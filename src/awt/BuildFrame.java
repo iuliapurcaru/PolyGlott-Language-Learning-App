@@ -8,11 +8,11 @@ public class BuildFrame extends JFrame {
 
         JFrame frame = new JFrame();
 
-        frame.setTitle("");
-        frame.setSize(1200, 857);
+        frame.setTitle("PolyGlott");
+        frame.setSize(1600, 1000);
         frame.setLocationRelativeTo(null);
-        //ImageIcon icon = new ImageIcon("img/logo.png");
-        //frame.setIconImage(icon.getImage());
+        ImageIcon icon = new ImageIcon("img/logo.png");
+        frame.setIconImage(icon.getImage());
         frame.setResizable(false);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

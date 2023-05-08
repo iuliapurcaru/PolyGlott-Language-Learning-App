@@ -13,12 +13,13 @@ public class Register {
         panel.setLayout(null);
         frame.add(panel);
 
+        Color backgroundColor = new Color(242, 175, 136);
         JLabel background = new JLabel();
         background.setIcon(new ImageIcon("img/background.png"));
         Dimension size = background.getPreferredSize();
         background.setBounds(0, 0, size.width, size.height);
         panel.add(background);
-        panel.setBackground(Color.getHSBColor(233.74f, 0.97f, 0.401f));
+        panel.setBackground(backgroundColor);
 
         JLabel title;
         title = new JLabel("SIGN UP");
@@ -75,12 +76,13 @@ public class Register {
         confirmPasswordField.setFont(new Font("Century Gothic", Font.PLAIN, 20));
         panel.add(confirmPasswordField);
 
+        Color buttonColor = new Color(245, 117, 5);
         JButton registerButton;
         registerButton = new JButton("REGISTER");
         registerButton.setFont(new Font("Century Gothic", Font.BOLD, 20));
         registerButton.setBounds(791,630, 130,40);
         registerButton.setForeground(Color.WHITE);
-        registerButton.setBackground(Color.getHSBColor(190.74f, 0.6909f, 0.516f));
+        registerButton.setBackground(buttonColor);
         registerButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         registerButton.addActionListener(
                 e -> RegisterAccount.registerAccount(usernameField.getText(),
@@ -103,7 +105,7 @@ public class Register {
         signInButton.setFont(new Font("Century Gothic", Font.PLAIN, 18));
         signInButton.setBounds(995,700,130,40);
         signInButton.setForeground(Color.WHITE);
-        signInButton.setBackground(Color.getHSBColor(190.74f, 0.6909f, 0.516f));
+        signInButton.setBackground(buttonColor);
         signInButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         signInButton.addActionListener(
                 e -> {
