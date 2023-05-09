@@ -17,71 +17,76 @@ public class Register {
         JLabel background = new JLabel();
         background.setIcon(new ImageIcon("img/background.png"));
         Dimension size = background.getPreferredSize();
-        background.setBounds(0, 0, size.width, size.height);
+        background.setBounds(size.width - 70, 0, size.width, size.height);
         panel.add(background);
-        panel.setBackground(backgroundColor);
+        panel.setBackground(Color.WHITE);
 
         JLabel title;
         title = new JLabel("SIGN UP");
-        title.setBounds(791, 100, 160, 40);
-        title.setFont(new Font("Century Gothic", Font.BOLD, 37));
-        title.setForeground(Color.WHITE);
+        title.setBounds(140, 100, 160, 40);
+        title.setFont(new Font("Century Gothic", Font.BOLD, 41));
+        title.setForeground(Color.BLACK);
         panel.add(title);
 
+        Color gray = new Color(247,247,247);
         JLabel email;
         JTextField emailField;
         email = new JLabel("Email");
-        email.setBounds(791,190,110,20);
-        email.setForeground(Color.WHITE);
-        email.setFont(new Font("Century Gothic", Font.BOLD, 20));
+        email.setBounds(140,190,300,30);
+        email.setForeground(Color.BLACK);
+        email.setFont(new Font("Century Gothic", Font.BOLD, 27));
         panel.add(email);
         emailField = new JTextField();
-        emailField.setBounds(791,222,300,40);
+        emailField.setBounds(140,232,400,40);
         emailField.setFont(new Font("Century Gothic", Font.PLAIN, 20));
+        emailField.setBackground(gray);
         panel.add(emailField);
 
         JLabel username;
         JTextField usernameField;
         username = new JLabel("Username");
-        username.setBounds(791,300,110,20);
-        username.setForeground(Color.WHITE);
-        username.setFont(new Font("Century Gothic", Font.BOLD, 20));
+        username.setBounds(140,300,300,30);
+        username.setForeground(Color.BLACK);
+        username.setFont(new Font("Century Gothic", Font.BOLD, 27));
         panel.add(username);
         usernameField = new JTextField();
-        usernameField.setBounds(791,332,300,40);
+        usernameField.setBounds(140,342,400,40);
         usernameField.setFont(new Font("Century Gothic", Font.PLAIN, 20));
+        usernameField.setBackground(gray);
         panel.add(usernameField);
 
         JLabel password;
         JPasswordField passwordField;
         password = new JLabel("Password");
-        password.setBounds(791,410,110,20);
-        password.setForeground(Color.WHITE);
-        password.setFont(new Font("Century Gothic", Font.BOLD, 20));
+        password.setBounds(140,410,300,30);
+        password.setForeground(Color.BLACK);
+        password.setFont(new Font("Century Gothic", Font.BOLD, 27));
         panel.add(password);
         passwordField = new JPasswordField();
-        passwordField.setBounds(791,442,300,40);
+        passwordField.setBounds(140,452,400,40);
         passwordField.setFont(new Font("Century Gothic", Font.PLAIN, 20));
+        passwordField.setBackground(gray);
         panel.add(passwordField);
 
         JLabel confirmPassword;
         JPasswordField confirmPasswordField;
         confirmPassword = new JLabel("Confirm password");
-        confirmPassword.setBounds(791,520,250,20);
-        confirmPassword.setForeground(Color.WHITE);
-        confirmPassword.setFont(new Font("Century Gothic", Font.BOLD, 20));
+        confirmPassword.setBounds(140,520,300,30);
+        confirmPassword.setForeground(Color.BLACK);
+        confirmPassword.setFont(new Font("Century Gothic", Font.BOLD, 27));
         panel.add(confirmPassword);
         confirmPasswordField = new JPasswordField();
-        confirmPasswordField.setBounds(791,552,300,40);
+        confirmPasswordField.setBounds(140,562,400,40);
         confirmPasswordField.setFont(new Font("Century Gothic", Font.PLAIN, 20));
+        confirmPasswordField.setBackground(gray);
         panel.add(confirmPasswordField);
 
         Color buttonColor = new Color(245, 117, 5);
         JButton registerButton;
         registerButton = new JButton("REGISTER");
         registerButton.setFont(new Font("Century Gothic", Font.BOLD, 20));
-        registerButton.setBounds(791,630, 130,40);
-        registerButton.setForeground(Color.WHITE);
+        registerButton.setBounds(140,630, 130,40);
+        registerButton.setForeground(Color.BLACK);
         registerButton.setBackground(buttonColor);
         registerButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         registerButton.addActionListener(
@@ -95,16 +100,16 @@ public class Register {
         panel.add(registerButton);
 
         JLabel account = new JLabel("Already have an account?");
-        account.setBounds(740, 710, 250,20);
-        account.setFont(new Font("Century Gothic", Font.PLAIN, 18));
-        account.setForeground(Color.WHITE);
+        account.setBounds(140, 710, 400,20);
+        account.setFont(new Font("Century Gothic", Font.PLAIN, 20));
+        account.setForeground(Color.BLACK);
         panel.add(account);
 
         JButton signInButton;
         signInButton = new JButton("SIGN IN");
         signInButton.setFont(new Font("Century Gothic", Font.PLAIN, 18));
-        signInButton.setBounds(995,700,130,40);
-        signInButton.setForeground(Color.WHITE);
+        signInButton.setBounds(140,750,130,40);
+        signInButton.setForeground(Color.BLACK);
         signInButton.setBackground(buttonColor);
         signInButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         signInButton.addActionListener(

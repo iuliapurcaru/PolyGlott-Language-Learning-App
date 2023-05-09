@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Added background">
-      <change afterPath="$PROJECT_DIR$/img/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo.png" afterDir="false" />
+    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Repositioned login elements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/awt/BuildFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/awt/BuildFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Register.java" afterDir="false" />
     </list>
@@ -36,23 +33,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Uni stuff/An 3/Sem 2/AM/Proiect/Language Learning App/src/lib/mysql-connector-java-8.0.22.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Uni stuff/An 3/Sem 2/AM/Proiect/Language Learning App/src/lib/mysql-connector-java-8.0.22.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -61,7 +58,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683567481582</updated>
-      <workItem from="1683567482379" duration="15044000" />
+      <workItem from="1683567482379" duration="15510000" />
+      <workItem from="1683655418713" duration="9685000" />
     </task>
     <task id="LOCAL-00001" summary="Built frame">
       <created>1683579882206</created>
@@ -70,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683579882206</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Repositioned login elements">
+      <created>1683588249056</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683588249056</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,6 +84,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Built frame" />
     <MESSAGE value="Added background" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added background" />
+    <MESSAGE value="Repositioned login elements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Repositioned login elements" />
   </component>
 </project>
