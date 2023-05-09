@@ -21,12 +21,16 @@ public class Login extends JFrame {
         frame.setResizable(false);
         frame.add(panel);
 
-        Color backgroundColor = new Color(242, 175, 136);
         JLabel background = new JLabel();
         background.setIcon(new ImageIcon("img/background.png"));
-        Dimension size = background.getPreferredSize();
-        background.setBounds(size.width - 70, 0, size.width, size.height);
+        Dimension sizeBkg = background.getPreferredSize();
+        background.setBounds(sizeBkg.width - 70, 228, sizeBkg.width, sizeBkg.height);
         panel.add(background);
+        JLabel logo = new JLabel();
+        logo.setIcon(new ImageIcon("img/logo-title.png"));
+        Dimension sizeLogo = logo.getPreferredSize();
+        logo.setBounds(sizeLogo.width - 70, 0, sizeLogo.width, sizeLogo.height);
+        panel.add(logo);
         panel.setBackground(Color.WHITE);
 
         JLabel title;
@@ -37,16 +41,19 @@ public class Login extends JFrame {
         panel.add(title);
 
         Color gray = new Color(247,247,247);
+        Font textFont = new Font("Century Gothic", Font.BOLD, 27);
+        Font textFieldFont = new Font("Century Gothic", Font.PLAIN, 20);
+
         JLabel username;
         JTextField usernameField;
         username = new JLabel("Username");
         username.setBounds(140,300,300,30);
         username.setForeground(Color.BLACK);
-        username.setFont(new Font("Century Gothic", Font.BOLD, 27));
+        username.setFont(textFont);
         panel.add(username);
         usernameField = new JTextField();
         usernameField.setBounds(140,342,400,40);
-        usernameField.setFont(new Font("Century Gothic", Font.PLAIN, 20));
+        usernameField.setFont(textFieldFont);
         usernameField.setBackground(gray);
         panel.add(usernameField);
 
@@ -55,19 +62,19 @@ public class Login extends JFrame {
         password = new JLabel("Password");
         password.setBounds(140,410,300,30);
         password.setForeground(Color.BLACK);
-        password.setFont(new Font("Century Gothic", Font.BOLD, 27));
+        password.setFont(textFont);
         panel.add(password);
         passwordField = new JPasswordField();
         passwordField.setBounds(140,452,400,40);
-        passwordField.setFont(new Font("Century Gothic", Font.PLAIN, 20));
+        passwordField.setFont(textFieldFont);
         passwordField.setBackground(gray);
         panel.add(passwordField);
 
         Color buttonColor = new Color(245, 117, 5);
         JButton signInButton = new JButton("SIGN IN");
-        signInButton.setFont(new Font("Century Gothic", Font.BOLD, 23));
-        signInButton.setBounds(140,520, 130,40);
-        signInButton.setForeground(Color.BLACK);
+        signInButton.setFont(textFont);
+        signInButton.setBounds(140,520, 150,50);
+        signInButton.setForeground(Color.WHITE);
         signInButton.setBackground(buttonColor);
         signInButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         signInButton.addActionListener(
@@ -77,15 +84,15 @@ public class Login extends JFrame {
         panel.add(signInButton);
 
         JLabel noAccount = new JLabel("Don't have an account?");
-        noAccount.setBounds(140, 598, 250,20);
-        noAccount.setFont(new Font("Century Gothic", Font.PLAIN, 20));
+        noAccount.setBounds(140, 640, 400,30);
+        noAccount.setFont(new Font("Century Gothic", Font.PLAIN, 27));
         noAccount.setForeground(Color.BLACK);
         panel.add(noAccount);
 
         JButton registerButton = new JButton("REGISTER");
-        registerButton.setFont(new Font("Century Gothic", Font.PLAIN, 20));
-        registerButton.setBounds(140,638, 130,40);
-        registerButton.setForeground(Color.BLACK);
+        registerButton.setFont(new Font("Century Gothic", Font.PLAIN, 27));
+        registerButton.setBounds(140,690, 150,50);
+        registerButton.setForeground(Color.WHITE);
         registerButton.setBackground(buttonColor);
         registerButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         registerButton.addActionListener(
@@ -96,6 +103,19 @@ public class Login extends JFrame {
 
         );
         panel.add(registerButton);
+
+        JButton guestButton;
+        guestButton = new JButton();
+        guestButton.setBounds(0,0,50,50);
+        guestButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        guestButton.addActionListener(
+                e -> {
+                    frame.dispose();
+                    Homepage.getHomepage("a");
+                }
+
+        );
+        panel.add(guestButton);
 
         frame.setVisible(true);
     }

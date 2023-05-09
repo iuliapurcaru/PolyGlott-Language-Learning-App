@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Objects;
+import java.util.regex.Pattern;
 
 public class RegisterAccount {
 
@@ -39,6 +40,10 @@ public class RegisterAccount {
             }
             else if (Objects.equals(email, "")) {
                 optionPaneFont.setText("Email cannot be empty!");
+                JOptionPane.showMessageDialog(null, optionPaneFont);
+            }
+            else if (!isValid(email)) {
+                optionPaneFont.setText("Email is invalid!");
                 JOptionPane.showMessageDialog(null, optionPaneFont);
             }
             else if (resultSetUser.next()) {
@@ -75,5 +80,18 @@ public class RegisterAccount {
             e.printStackTrace();
         }
 
+    }
+
+    public static boolean isValid(String email)
+    {
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+                "[a-zA-Z0-9_+&*-]+)*@" +
+                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                "A-Z]{2,7}$";
+
+        Pattern pat = Pattern.compile(emailRegex);
+        if (email == null)
+            return false;
+        return pat.matcher(email).matches();
     }
 }
