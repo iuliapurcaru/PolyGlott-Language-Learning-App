@@ -17,8 +17,8 @@ public class Buttons {
         Font font = new Font("Century Gothic", Font.BOLD, 23);
 
         icon = new ImageIcon("img/buttons/account.png");
-        buttons[0] = new JButton("ACCOUNT", icon);
-        buttons[0].setBounds(0, 0, 236, 90);
+        buttons[0] = new JButton("MY ACCOUNT", icon);
+        buttons[0].setBounds(0, 0, 236, 110);
         buttons[0].addActionListener(
                 e -> {
                     frame.dispose();
@@ -29,7 +29,7 @@ public class Buttons {
 
         icon = new ImageIcon("img/buttons/home.png");
         buttons[1] = new JButton("HOME", icon);
-        buttons[1].setBounds(0, 90, 236, 90);
+        buttons[1].setBounds(0, 110, 180, 169);
         buttons[1].addActionListener(
                 e -> {
                     frame.dispose();
@@ -38,9 +38,9 @@ public class Buttons {
         );
 
 
-        icon = new ImageIcon("img/buttons/teams.png");
-        buttons[2] = new JButton("LESSONS", icon);
-        buttons[2].setBounds(0, 180, 236, 90);
+        icon = new ImageIcon("img/buttons/chapters.png");
+        buttons[2] = new JButton("CHAPTERS", icon);
+        buttons[2].setBounds(0, 279, 180, 169);
         buttons[2].addActionListener(
                 e -> {
                     //frame.dispose();
@@ -49,9 +49,9 @@ public class Buttons {
 
         );
 
-        icon = new ImageIcon("img/buttons/matches.png");
+        icon = new ImageIcon("img/buttons/dictionary.png");
         buttons[3] = new JButton("DICTIONARY", icon);
-        buttons[3].setBounds(0, 270, 236, 90);
+        buttons[3].setBounds(0, 448, 180, 169);
         buttons[3].addActionListener(
                 e -> {
                     //frame.dispose();
@@ -61,9 +61,9 @@ public class Buttons {
         );
 
 
-        icon = new ImageIcon("img/buttons/groups.png");
-        buttons[4] = new JButton("LANGUAGES", icon);
-        buttons[4].setBounds(0, 360, 236, 90);
+        icon = new ImageIcon("img/buttons/practice.png");
+        buttons[4] = new JButton("PRACTICE", icon);
+        buttons[4].setBounds(0, 617, 180, 169);
         buttons[4].addActionListener(
                 e -> {
                     //frame.dispose();
@@ -73,9 +73,9 @@ public class Buttons {
         );
 
 
-        icon = new ImageIcon("img/buttons/stats.png");
-        buttons[5] = new JButton("STATS", icon);
-        buttons[5].setBounds(0, 450, 236, 90);
+        icon = new ImageIcon("img/buttons/languages.png");
+        buttons[5] = new JButton("LANGUAGES", icon);
+        buttons[5].setBounds(0, 786, 180, 169);
         buttons[5].addActionListener(
                 e -> {
                     //frame.dispose();
@@ -86,7 +86,7 @@ public class Buttons {
 
         icon = new ImageIcon("img/buttons/logout.png");
         buttons[6] = new JButton("LOGOUT", icon);
-        buttons[6].setBounds(1346, 0, 236, 90);
+        buttons[6].setBounds(1346, 0, 236, 110);
         buttons[6].addActionListener(
                 e -> {
                     frame.dispose();
@@ -107,7 +107,7 @@ public class Buttons {
 
         buttons[7] = new JButton();
         buttons[7].setFont(new Font("Century Gothic", Font.BOLD, 40));
-        buttons[7].setBounds(236, 0, 1110, 90);
+        buttons[7].setBounds(236, 0, 1110, 110);
         buttons[7].setHorizontalTextPosition(SwingConstants.CENTER);
         buttons[7].setForeground(Color.WHITE);
         buttons[7].setBackground(buttonColor);

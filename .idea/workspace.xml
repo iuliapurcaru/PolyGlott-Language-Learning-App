@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Finished login and register pages">
+    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Added account page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/background.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/awt/Buttons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/awt/Buttons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/RegisterAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/RegisterAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Register.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +59,9 @@
       <option name="presentableId" value="Default" />
       <updated>1683567481582</updated>
       <workItem from="1683567482379" duration="15510000" />
-      <workItem from="1683655418713" duration="18535000" />
+      <workItem from="1683655418713" duration="18661000" />
+      <workItem from="1683703944495" duration="3846000" />
+      <workItem from="1683749977522" duration="4634000" />
     </task>
     <task id="LOCAL-00001" summary="Built frame">
       <created>1683579882206</created>
@@ -86,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683667309345</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added account page">
+      <created>1683675954738</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683675954738</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,6 +102,7 @@
     <MESSAGE value="Added background" />
     <MESSAGE value="Repositioned login elements" />
     <MESSAGE value="Finished login and register pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished login and register pages" />
+    <MESSAGE value="Added account page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added account page" />
   </component>
 </project>

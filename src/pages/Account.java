@@ -30,7 +30,7 @@ public class Account {
         buttons[7].setText("MY ACCOUNT");
 
         JLabel user = new JLabel("HELLO, " + username);
-        user.setBounds(350, 140, 500, 40);
+        user.setBounds(300, 160, 500, 40);
         user.setFont(new Font("Century Gothic", Font.BOLD, 40));
         user.setForeground(Color.BLACK);
         panel.add(user);
@@ -39,35 +39,35 @@ public class Account {
         Color buttonColor = new Color(245, 117, 5);
 
         JLabel changeLabel = new JLabel("Change password:");
-        changeLabel.setBounds(350,218,800,30);
+        changeLabel.setBounds(300,238,800,33);
         changeLabel.setForeground(Color.BLACK);
         changeLabel.setFont(new Font("Century Gothic", Font.BOLD, 30));
         panel.add(changeLabel);
 
         JLabel newPassword = new JLabel("New password");
-        newPassword.setBounds(350,278,800,30);
+        newPassword.setBounds(300,278,800,30);
         newPassword.setForeground(Color.BLACK);
         newPassword.setFont(font);
         panel.add(newPassword);
         JPasswordField passwordField = new JPasswordField();
-        passwordField.setBounds(350,320,300,40);
+        passwordField.setBounds(300,320,300,40);
         passwordField.setFont(new Font("Century Gothic", Font.PLAIN, 20));
         panel.add(passwordField);
 
         JLabel confirmNewPassword = new JLabel("Confirm new password");
-        confirmNewPassword.setBounds(350,390,800,30);
+        confirmNewPassword.setBounds(300,390,800,30);
         confirmNewPassword.setForeground(Color.BLACK);
         confirmNewPassword.setFont(font);
         panel.add(confirmNewPassword);
         JPasswordField confirmPassword;
         confirmPassword = new JPasswordField();
-        confirmPassword.setBounds(350,432,300,40);
+        confirmPassword.setBounds(300,432,300,40);
         confirmPassword.setFont(new Font("Century Gothic", Font.PLAIN, 20));
         panel.add(confirmPassword);
 
         JButton changePassword = new JButton("CHANGE PASSWORD");
         changePassword.setFont(new Font("Century Gothic", Font.BOLD, 23));
-        changePassword.setBounds(350,520, 300,50);
+        changePassword.setBounds(300,520, 300,50);
         changePassword.setForeground(Color.WHITE);
         changePassword.setBackground(buttonColor);
         changePassword.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -111,7 +111,7 @@ public class Account {
 
         JButton deleteAccount = new JButton("DELETE ACCOUNT");
         deleteAccount.setFont(font);
-        deleteAccount.setBounds(350,700, 300,50);
+        deleteAccount.setBounds(300,700, 300,50);
         deleteAccount.setForeground(Color.WHITE);
         deleteAccount.setBackground(Color.RED);
         deleteAccount.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -142,6 +142,12 @@ public class Account {
         );
 
         panel.add(deleteAccount);
+
+        JLabel progressLabel = new JLabel("Your progress:");
+        progressLabel.setBounds(1000,238,800,33);
+        progressLabel.setForeground(Color.BLACK);
+        progressLabel.setFont(new Font("Century Gothic", Font.BOLD, 30));
+        panel.add(progressLabel);
 
     }
 }
