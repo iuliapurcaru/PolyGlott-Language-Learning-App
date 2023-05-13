@@ -11,7 +11,7 @@ public class Buttons {
     static Color buttonColor = new Color(245, 117, 5);
     static Color mouseEnteredColor = new Color(255, 143, 23);
 
-    public static JButton[] getButtons(JFrame frame, String username) {
+    public static JButton[] getButtons(JFrame frame, String username, String language) {
         JButton[] buttons = new JButton[8];
         ImageIcon icon;
         Font font = new Font("Century Gothic", Font.BOLD, 23);
@@ -22,7 +22,7 @@ public class Buttons {
         buttons[0].addActionListener(
                 e -> {
                     frame.dispose();
-                    Account.getAccount(username);
+                    Account.getAccount(username, language);
                 }
 
         );
@@ -33,7 +33,7 @@ public class Buttons {
         buttons[1].addActionListener(
                 e -> {
                     frame.dispose();
-                    Homepage.getHomepage(username);
+                    Homepage.getHomepage(username, language);
                 }
         );
 
@@ -43,8 +43,8 @@ public class Buttons {
         buttons[2].setBounds(0, 279, 180, 169);
         buttons[2].addActionListener(
                 e -> {
-                    //frame.dispose();
-                    //Teams.getTeams(username);
+                    frame.dispose();
+                    Chapters.getChapters(username, language);
                 }
 
         );
@@ -74,12 +74,12 @@ public class Buttons {
 
 
         icon = new ImageIcon("img/buttons/languages.png");
-        buttons[5] = new JButton("LANGUAGES", icon);
+        buttons[5] = new JButton("COURSES", icon);
         buttons[5].setBounds(0, 786, 180, 169);
         buttons[5].addActionListener(
                 e -> {
-                    //frame.dispose();
-                    //Stats.getStats(username);
+                    frame.dispose();
+                    Languages.getLanguages(username);
                 }
 
         );
@@ -111,7 +111,6 @@ public class Buttons {
         buttons[7].setHorizontalTextPosition(SwingConstants.CENTER);
         buttons[7].setForeground(Color.WHITE);
         buttons[7].setBackground(buttonColor);
-        //buttons[7].setEnabled(false);
         buttons[7].setBorderPainted(false);
 
         return buttons;

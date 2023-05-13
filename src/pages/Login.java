@@ -111,7 +111,7 @@ public class Login extends JFrame {
         guestButton.addActionListener(
                 e -> {
                     frame.dispose();
-                    Homepage.getHomepage("a");
+                    Languages.getLanguages("a");
                 }
 
         );

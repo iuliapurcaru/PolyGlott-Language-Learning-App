@@ -1,6 +1,6 @@
 package database;
 
-import pages.Homepage;
+import pages.Languages;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,7 +30,7 @@ public class LoginCheck {
 
             if (resultSet.next() && Objects.equals(resultSet.getString(1), password)) {
                 frame.dispose();
-                Homepage.getHomepage(username);
+                Languages.getLanguages(username);
             }
             else {
                 JLabel label = new JLabel("Incorrect username or password!");

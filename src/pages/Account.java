@@ -8,11 +8,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.Objects;
 
 public class Account {
 
-    public static void getAccount(String username) {
+    public static void getAccount(String username, String language) {
 
         JPanel panel = new JPanel();
         JFrame frame = BuildFrame.getFrame();
@@ -23,7 +24,7 @@ public class Account {
         JLabel optionPaneFont = new JLabel();
         optionPaneFont.setFont(new Font("Century Gothic", Font.BOLD, 27));
 
-        JButton[] buttons = Buttons.getButtons(frame, username);
+        JButton[] buttons = Buttons.getButtons(frame, username, language);
         for (int i = 0; i < 8; i++) {
             panel.add(buttons[i]);
         }
@@ -149,5 +150,48 @@ public class Account {
         progressLabel.setFont(new Font("Century Gothic", Font.BOLD, 30));
         panel.add(progressLabel);
 
+        try {
+
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void getProgress(String username, String language) {
+        Connection connection;
+        ResultSet resultSetUser;
+        PreparedStatement preparedStatementUser;
+        String checkUser = "SELECT username, languageID FROM user_progress WHERE username = ? and languageID = ?";
+    }
+
+    public static void checkCourse(String username, String languageID) {
+
+        Connection connection;
+        ResultSet resultSetUser;
+        PreparedStatement preparedStatementUser;
+        String checkUser = "SELECT username, languageID FROM user_progress WHERE username = ? and languageID = ?";
+
+        try {
+            connection = DatabaseConnection.getConnection();
+
+            preparedStatementUser = connection.prepareStatement(checkUser);
+            preparedStatementUser.setString(1, username);
+            preparedStatementUser.setString(2, languageID);
+            resultSetUser = preparedStatementUser.executeQuery();
+
+            if (!resultSetUser.next()) {
+                String insertUser = "INSERT INTO user_progress (username, languageID) VALUES (?, ?)";
+                PreparedStatement preparedStatement;
+                preparedStatement = connection.prepareStatement(insertUser);
+                preparedStatement.setString(1, languageID);
+                preparedStatement.setString(2, username);
+                preparedStatement.executeUpdate();
+            }
+            connection.close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
