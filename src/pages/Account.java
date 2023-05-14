@@ -20,7 +20,7 @@ public class Account {
         frame.add(panel);
 
         JLabel optionPaneFont = new JLabel();
-        optionPaneFont.setFont(new Font("Century Gothic", Font.BOLD, 27));
+        optionPaneFont.setFont(new Font("Century Gothic", Font.BOLD, 23));
 
         JButton[] buttons = Buttons.getButtons(frame, username, language);
         for (int i = 0; i < 8; i++) {
@@ -116,7 +116,8 @@ public class Account {
         deleteAccount.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         deleteAccount.addActionListener(
                 e -> {
-                    int input = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete your account?");
+                    optionPaneFont.setText("Are you sure you want to delete your account?");
+                    int input = JOptionPane.showConfirmDialog(null, optionPaneFont);
                     if (input == 0) {
                         Connection connection;
                         PreparedStatement preparedStatement;

@@ -15,7 +15,7 @@ public class RegisterAccount {
     public static void registerAccount(String username, String email, String password, String confirmPassword, JFrame frame) {
 
         JLabel optionPaneFont = new JLabel();
-        optionPaneFont.setFont(new Font("Century Gothic", Font.BOLD, 18));
+        optionPaneFont.setFont(new Font("Century Gothic", Font.BOLD, 23));
 
         Connection connection;
         ResultSet resultSetUser, resultSetEmail;

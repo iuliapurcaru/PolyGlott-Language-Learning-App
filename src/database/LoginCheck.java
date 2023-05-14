@@ -14,7 +14,7 @@ public class LoginCheck {
     public static void loginCheck(String username, String password, JFrame frame) {
 
         JLabel optionPaneFont = new JLabel();
-        optionPaneFont.setFont(new Font("Century Gothic", Font.BOLD, 18));
+        optionPaneFont.setFont(new Font("Century Gothic", Font.BOLD, 23));
 
         Connection connection;
         ResultSet resultSet;
@@ -33,9 +33,8 @@ public class LoginCheck {
                 Languages.getLanguages(username);
             }
             else {
-                JLabel label = new JLabel("Incorrect username or password!");
-                label.setFont(new Font("Arial", Font.PLAIN, 18));
-                JOptionPane.showMessageDialog(null, label);
+                optionPaneFont.setText("Incorrect username or password!");
+                JOptionPane.showMessageDialog(null, optionPaneFont);
             }
             connection.close();
         }
