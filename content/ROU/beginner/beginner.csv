@@ -1,6 +1,10 @@
-﻿Which one of these is "man"?,img,fată,femeie,bărbat,2
-Which one of these is "woman""?,img,băiat,femeie,bărbat,1
-How do you say "woman"?,text,bărbat,femeie,băiat,1
-Which one of these is "girl"?,img,fată,băiat,bărbat,0
-Which one of these is "boy"?,img,fată,femeie,băiat,2
-How do you say "man"?,text,băiat,fată,bărbat,2
+﻿Which one of these is "hello"?,multiple,img,bună,pa,multumesc,0
+Which one of these is "thank you"?,multiple,img,pa,bună,multumesc,2
+Which one of these is "bye"?,multiple,img,bună,multumesc,pa,2
+How do you say "thank you"?,multiple,text,bună,multumesc,pa,1
+How do you say "hello"?,multiple,text,bună,pa,multumesc,0
+How do you say "bye"?,multiple,text,bună,multumesc,pa,2
+Which one of these is "yes"?,multiple,img,multumesc,da,nu,1
+Which one of these is "no"?,multiple,img,nu,bună,da,0
+How do you say "yes"?,multiple,text,bună,multumesc,da,2
+How do you say "no"?,multiple,text,nu,pa,multumesc,0

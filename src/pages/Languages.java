@@ -20,12 +20,10 @@ public class Languages extends JFrame {
         JLabel chooseLanguage = new JLabel("Choose a Language Course");
         chooseLanguage.setBounds(100,160,800,35);
         chooseLanguage.setForeground(Color.BLACK);
-        chooseLanguage.setFont(new Font("Century Gothic", Font.BOLD, 30));
+        chooseLanguage.setFont(new Font("Century Gothic", Font.BOLD, 35));
         panel.add(chooseLanguage);
 
         int size = 0;
-        int align = 0;
-        int count = 0;
         String[] languageID = new String[10];
         JLabel[] languages = new JLabel[10];
         JButton[] languageButtons = new JButton[10];
