@@ -23,24 +23,6 @@ public class Languages extends JFrame {
         chooseLanguage.setFont(new Font("Century Gothic", Font.BOLD, 30));
         panel.add(chooseLanguage);
 
-        
-//        JButton but = new JButton();
-//        but.setBounds(100,200, 120,80);
-//        but.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-//        but.addActionListener(
-//                e -> {
-//                    frame.dispose();
-//                    Homepage.getHomepage(username, language);
-//                }
-//
-//        );
-//        panel.add(but);
-//        JLabel lang = new JLabel("Romanian");
-//        lang.setBounds(100,280, 130,40);
-//        lang.setFont(new Font("Century Gothic", Font.BOLD, 22));
-//        lang.setForeground(Color.BLACK);
-//        panel.add(lang);
-
         int size = 0;
         int align = 0;
         int count = 0;
@@ -74,7 +56,6 @@ public class Languages extends JFrame {
                         e -> {
 
                             Account.checkCourse(username, languageID[iFinal]);
-
                             frame.dispose();
                             Homepage.getHomepage(username, languageID[iFinal]);
                         }

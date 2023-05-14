@@ -39,12 +39,12 @@ public class Buttons {
 
 
         icon = new ImageIcon("img/buttons/chapters.png");
-        buttons[2] = new JButton("CHAPTERS", icon);
+        buttons[2] = new JButton("LESSONS", icon);
         buttons[2].setBounds(0, 279, 180, 169);
         buttons[2].addActionListener(
                 e -> {
                     frame.dispose();
-                    Chapters.getChapters(username, language);
+                    Lessons.getLessons(username, language);
                 }
 
         );
@@ -54,8 +54,8 @@ public class Buttons {
         buttons[3].setBounds(0, 448, 180, 169);
         buttons[3].addActionListener(
                 e -> {
-                    //frame.dispose();
-                    //Matches.getMatches(username);
+                    frame.dispose();
+                    Dictionary.getDictionary(username, language);
                 }
 
         );
@@ -66,8 +66,8 @@ public class Buttons {
         buttons[4].setBounds(0, 617, 180, 169);
         buttons[4].addActionListener(
                 e -> {
-                    //frame.dispose();
-                    //Groups.getGroups(username);
+                    frame.dispose();
+                    Practice.getPractice(username, language);
                 }
 
         );

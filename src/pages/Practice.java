@@ -7,8 +7,8 @@ import database.DatabaseConnection;
 import javax.swing.*;
 import java.awt.*;
 
-public class Chapters extends JFrame {
-    public static void getChapters(String username, String language) {
+public class Practice extends JFrame {
+    public static void getPractice(String username, String language) {
 
         JPanel panel = new JPanel();
         JFrame frame = BuildFrame.getFrame();
@@ -20,7 +20,7 @@ public class Chapters extends JFrame {
         for (int i = 0; i < 8; i++) {
             panel.add(buttons[i]);
         }
-        buttons[7].setText("CHAPTERS");
+        buttons[7].setText("PRACTICE");
 
     }
 

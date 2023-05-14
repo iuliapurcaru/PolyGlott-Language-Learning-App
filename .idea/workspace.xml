@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Repositioned buttons">
-      <change afterPath="$PROJECT_DIR$/img/flags/FRA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/flags/ROU.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Chapters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Languages.java" afterDir="false" />
+    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Added languages">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/beginner.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Dictionary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/LessonExercise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Practice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/awt/Buttons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/awt/Buttons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/LoginCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/LoginCheck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Homepage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Chapters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Lessons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Languages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Languages.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,24 +42,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Uni stuff/An 3/Sem 2/AM/Proiect/Language Learning App/src/lib/mysql-connector-java-8.0.22.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Uni stuff/An 3/Sem 2/AM/Proiect/Language Learning App/src/lib/mysql-connector-java-8.0.22.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,7 +77,12 @@
       <workItem from="1683655418713" duration="18661000" />
       <workItem from="1683703944495" duration="3846000" />
       <workItem from="1683749977522" duration="4841000" />
-      <workItem from="1683913965235" duration="17257000" />
+      <workItem from="1683913965235" duration="19805000" />
+      <workItem from="1683981671086" duration="134000" />
+      <workItem from="1683984839790" duration="82000" />
+      <workItem from="1683987945315" duration="6083000" />
+      <workItem from="1683999139183" duration="9701000" />
+      <workItem from="1684063164639" duration="172000" />
     </task>
     <task id="LOCAL-00001" summary="Built frame">
       <created>1683579882206</created>
@@ -109,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683757251852</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added languages">
+      <created>1683937737500</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683937737500</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,7 +140,8 @@
     <MESSAGE value="Finished login and register pages" />
     <MESSAGE value="Added account page" />
     <MESSAGE value="Repositioned buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Repositioned buttons" />
+    <MESSAGE value="Added languages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added languages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
