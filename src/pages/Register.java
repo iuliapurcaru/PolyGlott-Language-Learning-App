@@ -13,7 +13,6 @@ public class Register {
         panel.setLayout(null);
         frame.add(panel);
 
-        Color backgroundColor = new Color(242, 175, 136);
         JLabel background = new JLabel();
         background.setIcon(new ImageIcon("img/background.png"));
         Dimension sizeBkg = background.getPreferredSize();
@@ -33,60 +32,26 @@ public class Register {
         title.setForeground(Color.BLACK);
         panel.add(title);
 
-        Color gray = new Color(247,247,247);
         Font textFont = new Font("Century Gothic", Font.BOLD, 27);
-        Font textFieldFont = new Font("Century Gothic", Font.PLAIN, 20);
 
-        JLabel email;
-        JTextField emailField;
-        email = new JLabel("Email");
-        email.setBounds(140,190,300,30);
-        email.setForeground(Color.BLACK);
-        email.setFont(textFont);
+        JLabel email = BuildFrame.getTextLabel("Email", 140, 190);
         panel.add(email);
-        emailField = new JTextField();
-        emailField.setBounds(140,232,400,40);
-        emailField.setFont(textFieldFont);
-        emailField.setBackground(gray);
+        JTextField emailField = BuildFrame.getTextField(140, 232);
         panel.add(emailField);
 
-        JLabel username;
-        JTextField usernameField;
-        username = new JLabel("Username");
-        username.setBounds(140,300,300,30);
-        username.setForeground(Color.BLACK);
-        username.setFont(textFont);
+        JLabel username = BuildFrame.getTextLabel("Username", 140, 300);
         panel.add(username);
-        usernameField = new JTextField();
-        usernameField.setBounds(140,342,400,40);
-        usernameField.setFont(textFieldFont);
-        usernameField.setBackground(gray);
+        JTextField usernameField = BuildFrame.getTextField(140, 342);
         panel.add(usernameField);
 
-        JLabel password;
-        JPasswordField passwordField;
-        password = new JLabel("Password");
-        password.setBounds(140,410,300,30);
-        password.setForeground(Color.BLACK);
-        password.setFont(textFont);
+        JLabel password = BuildFrame.getTextLabel("Password", 140, 410);
         panel.add(password);
-        passwordField = new JPasswordField();
-        passwordField.setBounds(140,452,400,40);
-        passwordField.setFont(textFieldFont);
-        passwordField.setBackground(gray);
+        JPasswordField passwordField = BuildFrame.getPasswordField(140, 452);
         panel.add(passwordField);
 
-        JLabel confirmPassword;
-        JPasswordField confirmPasswordField;
-        confirmPassword = new JLabel("Confirm password");
-        confirmPassword.setBounds(140,520,300,30);
-        confirmPassword.setForeground(Color.BLACK);
-        confirmPassword.setFont(textFont);
+        JLabel confirmPassword = BuildFrame.getTextLabel("Confirm password", 140, 520);
         panel.add(confirmPassword);
-        confirmPasswordField = new JPasswordField();
-        confirmPasswordField.setBounds(140,562,400,40);
-        confirmPasswordField.setFont(textFieldFont);
-        confirmPasswordField.setBackground(gray);
+        JPasswordField confirmPasswordField = BuildFrame.getPasswordField(140, 562);
         panel.add(confirmPasswordField);
 
         Color buttonColor = new Color(245, 117, 5);

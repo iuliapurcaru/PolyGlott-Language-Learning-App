@@ -809,18 +809,12 @@ languageID</ColNames>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="224" parent="207" name="user_level">
-      <DasType>int(11)|0s</DasType>
-      <DefaultExpression>0</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <index id="225" parent="207" name="PRIMARY">
+    <index id="224" parent="207" name="PRIMARY">
       <ColNames>username</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="226" parent="207" name="PRIMARY">
+    <key id="225" parent="207" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

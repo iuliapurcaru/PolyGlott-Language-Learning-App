@@ -1,5 +1,6 @@
 package pages;
 
+import awt.BuildFrame;
 import database.LoginCheck;
 
 import java.awt.*;
@@ -40,34 +41,16 @@ public class Login extends JFrame {
         title.setForeground(Color.BLACK);
         panel.add(title);
 
-        Color gray = new Color(247,247,247);
         Font textFont = new Font("Century Gothic", Font.BOLD, 27);
-        Font textFieldFont = new Font("Century Gothic", Font.PLAIN, 20);
 
-        JLabel username;
-        JTextField usernameField;
-        username = new JLabel("Username");
-        username.setBounds(140,300,300,30);
-        username.setForeground(Color.BLACK);
-        username.setFont(textFont);
+        JLabel username = BuildFrame.getTextLabel("Username", 140, 300);
         panel.add(username);
-        usernameField = new JTextField();
-        usernameField.setBounds(140,342,400,40);
-        usernameField.setFont(textFieldFont);
-        usernameField.setBackground(gray);
+        JTextField usernameField = BuildFrame.getTextField(140, 342);
         panel.add(usernameField);
 
-        JLabel password;
-        JPasswordField passwordField;
-        password = new JLabel("Password");
-        password.setBounds(140,410,300,30);
-        password.setForeground(Color.BLACK);
-        password.setFont(textFont);
+        JLabel password = BuildFrame.getTextLabel("Password", 140, 410);
         panel.add(password);
-        passwordField = new JPasswordField();
-        passwordField.setBounds(140,452,400,40);
-        passwordField.setFont(textFieldFont);
-        passwordField.setBackground(gray);
+        JPasswordField passwordField = BuildFrame.getPasswordField(140, 452);
         panel.add(passwordField);
 
         Color buttonColor = new Color(245, 117, 5);

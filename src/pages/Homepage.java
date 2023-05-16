@@ -3,6 +3,7 @@ package pages;
 import awt.BuildFrame;
 import awt.Buttons;
 import database.DatabaseConnection;
+import database.Level;
 
 import javax.swing.*;
 import java.awt.*;
@@ -37,8 +38,8 @@ public class Homepage extends JFrame {
             JLabel languageLabel;
 
             while(resultSet.next()) {
-                languageLabel= new JLabel(resultSet.getString("language_name") + " Course");
-                languageLabel.setBounds(270, 160, 500, 40);
+                languageLabel= new JLabel(resultSet.getString("language_name") + " Course Overview");
+                languageLabel.setBounds(270, 160, 700, 40);
                 languageLabel.setFont(new Font("Century Gothic", Font.BOLD, 40));
                 languageLabel.setForeground(Color.BLACK);
                 panel.add(languageLabel);
@@ -51,6 +52,31 @@ public class Homepage extends JFrame {
 
         }
 
+        Font infoFont = new Font("Century Gothic", Font.PLAIN, 35);
+
+        int level = Level.getLevel(username, language);
+        int exp = Level.getExp(username, language);
+
+        JLabel languageLevel = new JLabel();
+        languageLevel.setBounds(270, 190, 500, 120);
+        languageLevel.setFont(infoFont);
+        languageLevel.setForeground(Color.BLACK);
+        languageLevel.setText("Level " + level);
+        panel.add(languageLevel);
+
+        JLabel languageXP = new JLabel();
+        languageXP.setBounds(270, 250, 500, 120);
+        languageXP.setFont(infoFont);
+        languageXP.setForeground(Color.BLACK);
+        languageXP.setText("XP until next level: " + ((level + 1) * 100 - exp));
+        panel.add(languageXP);
+
+        JLabel lastLesson = new JLabel();
+        lastLesson.setBounds(270, 310, 500, 120);
+        lastLesson.setFont(infoFont);
+        lastLesson.setForeground(Color.BLACK);
+        lastLesson.setText("Last lesson: ");
+        panel.add(lastLesson);
     }
 
 }

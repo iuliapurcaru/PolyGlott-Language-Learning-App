@@ -48,7 +48,7 @@ public class Lessons extends JFrame {
             lessonButtons[i].addActionListener(
                     e -> {
                         frame.dispose();
-                        LessonExercise.getLessonExercise(username, language, lessons[iFinal]);
+                        Exercise.getExercise(username, language, lessons[iFinal]);
                     }
             );
             panel.add(lessonButtons[i]);

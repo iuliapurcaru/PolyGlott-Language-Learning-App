@@ -4,21 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Optimized exercises">
-      <change afterPath="$PROJECT_DIR$/content/ROU/dictionary.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/Level.java" afterDir="false" />
+    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Added dictionary">
+      <change afterPath="$PROJECT_DIR$/content/database/language_app_users/languages.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/database/language_app_users/user_progress.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/database/language_app_users/users.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/flags/ESP.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/flags/GER.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6591e4b6-3d92-48e2-94e4-b557c0c55aa3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6591e4b6-3d92-48e2-94e4-b557c0c55aa3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/ROU/beginner/beginner.csv" beforeDir="false" afterPath="$PROJECT_DIR$/content/ROU/beginner/beginner.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/awt/Buttons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/awt/Buttons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/CalculateLevel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/LoginCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/LoginCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/img/bună.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/img/pa.png" beforeDir="false" afterPath="$PROJECT_DIR$/content/ROU/beginner/img/pa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/dictionary.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/flags/FRA.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/flags/FRA.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/flags/ROU.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/flags/ROU.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/awt/BuildFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/awt/BuildFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/Level.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Homepage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Languages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Languages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LessonExercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LessonExercise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LessonExercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Exercise.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Lessons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Lessons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Practice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Register.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,29 +60,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Uni stuff/An 3/Sem 2/AM/Proiect/Language Learning App/src/lib/mysql-connector-java-8.0.22.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Uni stuff/An 3/Sem 2/AM/Proiect/Language Learning App/content/database",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -91,7 +104,7 @@
       <workItem from="1683999139183" duration="9701000" />
       <workItem from="1684063164639" duration="32737000" />
       <workItem from="1684171738119" duration="15506000" />
-      <workItem from="1684236300082" duration="599000" />
+      <workItem from="1684236300082" duration="23624000" />
     </task>
     <task id="LOCAL-00001" summary="Built frame">
       <created>1683579882206</created>
@@ -156,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684107791106</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added dictionary">
+      <created>1684237735447</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684237735447</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +204,8 @@
     <MESSAGE value="Added languages" />
     <MESSAGE value="Added exercises" />
     <MESSAGE value="Optimized exercises" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimized exercises" />
+    <MESSAGE value="Added dictionary" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added dictionary" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

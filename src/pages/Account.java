@@ -3,9 +3,13 @@ package pages;
 import awt.BuildFrame;
 import awt.Buttons;
 import database.DatabaseConnection;
+import database.Level;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.sql.*;
 import java.util.Objects;
 
@@ -143,24 +147,25 @@ public class Account {
 
         panel.add(deleteAccount);
 
+        JLabel usernameLabel = new JLabel("Hello, " + username + "!");
+        usernameLabel.setBounds(300,140,800,40);
+        usernameLabel.setForeground(Color.BLACK);
+        usernameLabel.setFont(new Font("Century Gothic", Font.BOLD, 40));
+        panel.add(usernameLabel);
+
         JLabel progressLabel = new JLabel("Your courses");
-        progressLabel.setBounds(300,160,800,40);
+        progressLabel.setBounds(300,220,800,40);
         progressLabel.setForeground(Color.BLACK);
         progressLabel.setFont(new Font("Century Gothic", Font.BOLD, 38));
         panel.add(progressLabel);
 
-        JLabel languageLabel;
-        JLabel languageLevel;
-        JLabel languageExp;
-        JButton languageFlag;
-        String languageID;
-        ImageIcon flag;
+        BufferedImage img = null;
 
         try {
             Connection connection;
             ResultSet resultSet;
             PreparedStatement preparedStatement;
-            String getProgress = "SELECT l.language_name, up.languageID, up.language_level, up.language_exp FROM languages l, user_progress up WHERE up.username = ? AND up.languageID = l.languageID";
+            String getProgress = "SELECT l.language_name, up.languageID FROM languages l, user_progress up WHERE up.username = ? AND up.languageID = l.languageID";
 
             connection = DatabaseConnection.getConnection();
             preparedStatement = connection.prepareStatement(getProgress);
@@ -168,38 +173,45 @@ public class Account {
             resultSet = preparedStatement.executeQuery();
 
             int align = 0;
-            int level;
             while(resultSet.next()) {
-                level = Integer.parseInt(resultSet.getString("language_level"));
-                languageID = resultSet.getString("languageID");
+                String languageID = resultSet.getString("languageID");
+                int level = Level.getLevel(username, languageID);
+                int exp = Level.getExp(username, languageID);
 
-                flag = new ImageIcon("img/flags/" + languageID + ".png");
-                languageFlag = new JButton(flag);
-                languageFlag.setBounds(300, 220 + align * 100, 120, 80);
+                try {
+                    img = ImageIO.read(new File("img/flags/" + languageID + ".png"));
+                }
+                catch (Exception e){
+                    e.printStackTrace();
+                }
+                assert img != null;
+                Image resizeImg = img.getScaledInstance(120, 80, Image.SCALE_SMOOTH);
+                ImageIcon flag = new ImageIcon(resizeImg);
+                JButton languageFlag = new JButton(flag);
+                languageFlag.setBounds(300, 280 + align * 100, 120, 80);
                 languageFlag.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-                String finalLanguageID = languageID;
                 languageFlag.addActionListener(
                         e -> {
                             frame.dispose();
-                            Homepage.getHomepage(username, finalLanguageID);
+                            Homepage.getHomepage(username, languageID);
                         }
                 );
                 panel.add(languageFlag);
 
-                languageLabel = new JLabel(resultSet.getString("language_name"));
-                languageLabel.setBounds(450, 220 + align * 100, 300, 30);
+                JLabel languageLabel = new JLabel(resultSet.getString("language_name"));
+                languageLabel.setBounds(450, 280 + align * 100, 300, 30);
                 languageLabel.setFont(new Font("Century Gothic", Font.BOLD, 28));
                 languageLabel.setForeground(Color.BLACK);
                 panel.add(languageLabel);
 
-                languageLevel = new JLabel("Level " + resultSet.getString("language_level"));
-                languageLevel.setBounds(450, 260 + align * 100, 200, 30);
+                JLabel languageLevel = new JLabel("Level " + level);
+                languageLevel.setBounds(450, 320 + align * 100, 200, 30);
                 languageLevel.setFont(new Font("Century Gothic", Font.BOLD, 28));
                 languageLevel.setForeground(Color.GRAY);
                 panel.add(languageLevel);
 
-                languageExp = new JLabel(resultSet.getString("language_exp") + "/" + ((level + 1) * 100) + " XP");
-                languageExp.setBounds(650, 260 + align * 100, 200, 30);
+                JLabel languageExp = new JLabel(exp + "/" + ((level + 1) * 100) + " XP");
+                languageExp.setBounds(650, 320 + align * 100, 200, 30);
                 languageExp.setFont(new Font("Century Gothic", Font.BOLD, 28));
                 languageExp.setForeground(Color.GRAY);
                 panel.add(languageExp);

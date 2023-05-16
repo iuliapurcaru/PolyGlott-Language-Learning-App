@@ -9,14 +9,15 @@ import java.awt.*;
 import java.io.*;
 import java.util.Objects;
 
-public class LessonExercise extends JFrame {
+public class Exercise extends JFrame {
 
     static int currentQuestion;
     static Color selectedColor = new Color(245, 212, 66);
     static Color buttonColor = new Color(245, 117, 5);
-    static int numberOfQuestions = 10;
+    static JLabel optionPaneFont = new JLabel();
+    static int numberOfQuestions = 3;
 
-    public static void getLessonExercise(String username, String language, String lesson) {
+    public static void getExercise(String username, String language, String lesson) {
 
         currentQuestion = 0;
         String line;
@@ -48,11 +49,13 @@ public class LessonExercise extends JFrame {
         if(Objects.equals(exercises[1][currentQuestion], "multiple")) {
             multipleChoiceExercise(username, language, exercises);
         }
+        else if(Objects.equals(exercises[1][currentQuestion], "input")) {
+            inputTextExercise(username, language, exercises);
+        }
     }
 
     public static void multipleChoiceExercise(String username, String language, String[][] exercises) {
 
-        JLabel optionPaneFont = new JLabel();
         optionPaneFont.setFont(new Font("Century Gothic", Font.BOLD, 23));
 
         JPanel panel = new JPanel();
@@ -73,19 +76,20 @@ public class LessonExercise extends JFrame {
         questionLabel.setFont(new Font("Century Gothic", Font.BOLD, 30));
         panel.add(questionLabel);
 
-        String correctAnswer = null;
+        String correctAnswer;
         String[] choiceAnswer = {null};
         JButton[] choices = new JButton[3];
         int choiceNumber = 3;
         final JButton[] selectedButton = {null};
         JLabel[] choicesLabels = new JLabel[3];
         ImageIcon choice;
+        correctAnswer = exercises[6][currentQuestion];
+
         for(int i = 0; i < 3; i++) {
-            correctAnswer = exercises[6][currentQuestion];
 
             if(Objects.equals(exercises[2][currentQuestion], "text")) {
                 choices[i] = new JButton(exercises[choiceNumber + i][currentQuestion]);
-                choices[i].setFont(new Font("Century Gothic", Font.BOLD, 23));
+                choices[i].setFont(new Font("Century Gothic", Font.BOLD, 25));
                 choices[i].setBounds(280 + i * 250, 400, 200, 100);
                 choices[i].setForeground(Color.BLACK);
                 choices[i].setBackground(buttonColor);
@@ -106,7 +110,7 @@ public class LessonExercise extends JFrame {
                 choicesLabels[i] = new JLabel(exercises[i + 3][currentQuestion]);
                 choicesLabels[i].setBounds(390 + i * 400,670,200,35);
                 choicesLabels[i].setForeground(Color.BLACK);
-                choicesLabels[i].setFont(new Font("Century Gothic", Font.BOLD, 23));
+                choicesLabels[i].setFont(new Font("Century Gothic", Font.BOLD, 25));
                 panel.add(choicesLabels[i]);
 
                 choice = new ImageIcon("content/ROU/beginner/img/" + exercises[i + 3][currentQuestion] + ".png");
@@ -128,19 +132,14 @@ public class LessonExercise extends JFrame {
             panel.add(choices[i]);
         }
 
-        JButton checkButton = new JButton("CHECK");
-        checkButton.setFont(new Font("Century Gothic", Font.BOLD, 27));
-        checkButton.setBounds(280,750, 170,70);
-        checkButton.setForeground(Color.BLACK);
-        checkButton.setBackground(selectedColor);
-        checkButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        JButton checkButton = getCheckButton();
         String finalCorrectAnswer = correctAnswer;
         checkButton.addActionListener(
                 e -> {
                     if(Objects.equals(finalCorrectAnswer, choiceAnswer[0])) {
                         optionPaneFont.setText("Correct!");
                         JOptionPane.showMessageDialog(null, optionPaneFont);
-                        Dictionary.addToDictionary(exercises[3 + Integer.parseInt(finalCorrectAnswer)][currentQuestion] + " = " + exercises[7][currentQuestion], language);
+                        Dictionary.addToDictionary(username, language, exercises[3 + Integer.parseInt(finalCorrectAnswer)][currentQuestion], exercises[7][currentQuestion]);
                         if(currentQuestion < numberOfQuestions - 1) {
                             frame.dispose();
                             currentQuestion++;
@@ -161,6 +160,77 @@ public class LessonExercise extends JFrame {
                 }
         );
         panel.add(checkButton);
+    }
+
+    public static void inputTextExercise(String username, String language, String[][] exercises) {
+
+        optionPaneFont.setFont(new Font("Century Gothic", Font.BOLD, 23));
+
+        JPanel panel = new JPanel();
+        JFrame frame = BuildFrame.getFrame();
+        panel.setLayout(null);
+        panel.setBackground(Color.WHITE);
+        frame.add(panel);
+
+        JButton[] buttons = Buttons.getButtons(frame, username, language);
+        for (int i = 0; i < 7; i++) {
+            panel.add(buttons[i]);
+        }
+        buttons[6].setText("LESSONS");
+
+        JLabel questionLabel = new JLabel(exercises[0][currentQuestion]);
+        questionLabel.setBounds(280,210,500,35);
+        questionLabel.setForeground(Color.BLACK);
+        questionLabel.setFont(new Font("Century Gothic", Font.BOLD, 30));
+        panel.add(questionLabel);
+
+        String correctAnswer;
+        String[] inputAnswer = {null};
+        correctAnswer = exercises[6][currentQuestion];
+        JTextField inputAnswerField = BuildFrame.getTextField(280, 480);
+        panel.add(inputAnswerField);
+
+        JButton checkButton = getCheckButton();
+        String finalCorrectAnswer = correctAnswer;
+        checkButton.addActionListener(
+                e -> {
+                    inputAnswer[0] = inputAnswerField.getText();
+
+                    if(Objects.equals(finalCorrectAnswer, inputAnswer[0])) {
+                        optionPaneFont.setText("Correct!");
+                        JOptionPane.showMessageDialog(null, optionPaneFont);
+                        Dictionary.addToDictionary(username, language, finalCorrectAnswer, exercises[7][currentQuestion]);
+                        if(currentQuestion < numberOfQuestions - 1) {
+                            frame.dispose();
+                            currentQuestion++;
+                            showExercises(username, language, exercises);
+                        }
+                        else {
+                            optionPaneFont.setText("Congratulations! You finished the lesson!      +10XP");
+                            Level.calculateLevel(username, language);
+                            JOptionPane.showMessageDialog(null, optionPaneFont);
+                            frame.dispose();
+                            Lessons.getLessons(username, language);
+                        }
+                    }
+                    else {
+                        optionPaneFont.setText("Wrong answer!");
+                        JOptionPane.showMessageDialog(null, optionPaneFont);
+                    }
+                }
+        );
+        panel.add(checkButton);
+    }
+
+    public static JButton getCheckButton() {
+        JButton checkButton = new JButton("CHECK");
+        checkButton.setFont(new Font("Century Gothic", Font.BOLD, 27));
+        checkButton.setBounds(280,750, 170,70);
+        checkButton.setForeground(Color.BLACK);
+        checkButton.setBackground(selectedColor);
+        checkButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+        return checkButton;
     }
 
 }

@@ -40,7 +40,7 @@ public class Languages extends JFrame {
             Connection connection;
             ResultSet resultSet;
             Statement statement;
-            String languagesQuery = "SELECT languageID, language_name FROM languages ORDER BY language_name DESC";
+            String languagesQuery = "SELECT languageID, language_name FROM languages ORDER BY rank";
 
             connection = DatabaseConnection.getConnection();
             statement = connection.createStatement();
@@ -59,12 +59,10 @@ public class Languages extends JFrame {
                 int iFinal = i;
                 languageButtons[i].addActionListener(
                         e -> {
-
                             Account.checkCourse(username, languageID[iFinal]);
                             frame.dispose();
                             Homepage.getHomepage(username, languageID[iFinal]);
                         }
-
                 );
             }
 
@@ -74,11 +72,11 @@ public class Languages extends JFrame {
             e.printStackTrace();
         }
 
-        for(int i = 0; i < 2; i++) {
-            languageButtons[i].setBounds(100 + i * 190, 220, 120, 80);
+        for(int i = 0; i < 4; i++) {
+            languageButtons[i].setBounds(100 + i * 250, 220, 180, 120);
             panel.add(languageButtons[i]);
-            languages[i].setBounds(100 + i * 190, 300, 130, 40);
-            languages[i].setFont(new Font("Century Gothic", Font.BOLD, 22));
+            languages[i].setBounds(100 + i * 250, 340, 130, 40);
+            languages[i].setFont(new Font("Century Gothic", Font.BOLD, 25));
             panel.add(languages[i]);
         }
     }

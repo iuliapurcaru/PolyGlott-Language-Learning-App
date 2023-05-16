@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="5500c085-a6d2-496a-b753-c6e784a38767" name="language_app_users@localhost (DDL) Mapping">
+      <data-sources db="6591e4b6-3d92-48e2-94e4-b557c0c55aa3" ddl="b1df2960-543c-4a79-9316-9453bd65112f" />
+      <scope>
+        <node negative="1">
+          <node kind="database" qname="@" />
+          <node kind="schema" qname="language_app_users" />
+        </node>
+      </scope>
+    </mapping>
+  </component>
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="b1df2960-543c-4a79-9316-9453bd65112f" />
+          <option name="name" value="language_app_users@localhost (DDL)" />
+          <option name="dbmsName" value="MYSQL" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/content/database" />
+            </array>
+          </option>
+        </State>
+      </list>
+    </option>
+  </component>
+</project>
