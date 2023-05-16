@@ -17,6 +17,13 @@ public class Languages extends JFrame {
         panel.setBackground(Color.WHITE);
         frame.add(panel);
 
+        JButton[] buttons = Buttons.getButtons(frame, username, "");
+        buttons[0].setEnabled(false);
+        panel.add(buttons[0]);
+        panel.add(buttons[5]);
+        panel.add(buttons[6]);
+        buttons[6].setText("COURSES");
+
         JLabel chooseLanguage = new JLabel("Choose a Language Course");
         chooseLanguage.setBounds(100,160,800,35);
         chooseLanguage.setForeground(Color.BLACK);
@@ -74,14 +81,6 @@ public class Languages extends JFrame {
             languages[i].setFont(new Font("Century Gothic", Font.BOLD, 22));
             panel.add(languages[i]);
         }
-
-        JButton[] buttons = Buttons.getButtons(frame, username, "");
-        buttons[0].setEnabled(false);
-        panel.add(buttons[0]);
-        panel.add(buttons[6]);
-        panel.add(buttons[7]);
-        buttons[7].setText("COURSES");
-
     }
 
 }

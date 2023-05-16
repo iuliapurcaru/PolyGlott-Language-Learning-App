@@ -23,10 +23,10 @@ public class Account {
         optionPaneFont.setFont(new Font("Century Gothic", Font.BOLD, 23));
 
         JButton[] buttons = Buttons.getButtons(frame, username, language);
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 7; i++) {
             panel.add(buttons[i]);
         }
-        buttons[7].setText("MY ACCOUNT");
+        buttons[6].setText("MY ACCOUNT");
 
         JLabel user = new JLabel("Manage your account");
         user.setBounds(1060, 160, 500, 40);
@@ -85,7 +85,7 @@ public class Account {
                         Connection connection;
                         PreparedStatement preparedStatement;
                         String updateUser = "UPDATE users SET password = ? WHERE username = ?";
-                        UIManager.put("OptionPane.minimumSize", new Dimension(100, 50));
+                        //UIManager.put("OptionPane.minimumSize", new Dimension(100, 50));
 
                         try {
                             connection = DatabaseConnection.getConnection();
@@ -198,7 +198,7 @@ public class Account {
                 languageLevel.setForeground(Color.GRAY);
                 panel.add(languageLevel);
 
-                languageExp = new JLabel(resultSet.getString("language_exp") + " XP/" + ((level + 1) * 100));
+                languageExp = new JLabel(resultSet.getString("language_exp") + "/" + ((level + 1) * 100) + " XP");
                 languageExp.setBounds(650, 260 + align * 100, 200, 30);
                 languageExp.setFont(new Font("Century Gothic", Font.BOLD, 28));
                 languageExp.setForeground(Color.GRAY);

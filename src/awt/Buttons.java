@@ -12,7 +12,7 @@ public class Buttons {
     static Color mouseEnteredColor = new Color(255, 143, 23);
 
     public static JButton[] getButtons(JFrame frame, String username, String language) {
-        JButton[] buttons = new JButton[8];
+        JButton[] buttons = new JButton[7];
         ImageIcon icon;
         Font font = new Font("Century Gothic", Font.BOLD, 23);
 
@@ -61,22 +61,22 @@ public class Buttons {
         );
 
 
-        icon = new ImageIcon("img/buttons/practice.png");
-        buttons[4] = new JButton("PRACTICE", icon);
-        buttons[4].setBounds(0, 617, 180, 169);
-        buttons[4].addActionListener(
-                e -> {
-                    frame.dispose();
-                    Practice.getPractice(username, language);
-                }
-
-        );
+//        icon = new ImageIcon("img/buttons/practice.png");
+//        buttons[4] = new JButton("PRACTICE", icon);
+//        buttons[4].setBounds(0, 617, 180, 169);
+//        buttons[4].addActionListener(
+//                e -> {
+//                    frame.dispose();
+//                    Practice.getPractice(username, language);
+//                }
+//
+//        );
 
 
         icon = new ImageIcon("img/buttons/languages.png");
-        buttons[5] = new JButton("COURSES", icon);
-        buttons[5].setBounds(0, 786, 180, 169);
-        buttons[5].addActionListener(
+        buttons[4] = new JButton("COURSES", icon);
+        buttons[4].setBounds(0, 786, 180, 169);
+        buttons[4].addActionListener(
                 e -> {
                     frame.dispose();
                     Languages.getLanguages(username);
@@ -85,16 +85,16 @@ public class Buttons {
         );
 
         icon = new ImageIcon("img/buttons/logout.png");
-        buttons[6] = new JButton("LOGOUT", icon);
-        buttons[6].setBounds(1346, 0, 236, 110);
-        buttons[6].addActionListener(
+        buttons[5] = new JButton("LOGOUT", icon);
+        buttons[5].setBounds(1346, 0, 236, 110);
+        buttons[5].addActionListener(
                 e -> {
                     frame.dispose();
                     Login.getLogin();
                 }
         );
 
-        for(int i = 0; i < 7; i++) {
+        for(int i = 0; i < 6; i++) {
             buttons[i].setFont(font);
             buttons[i].setVerticalTextPosition(SwingConstants.BOTTOM);
             buttons[i].setHorizontalTextPosition(SwingConstants.CENTER);
@@ -105,13 +105,13 @@ public class Buttons {
             addButtonMouseAdapter(buttons[i]);
         }
 
-        buttons[7] = new JButton();
-        buttons[7].setFont(new Font("Century Gothic", Font.BOLD, 40));
-        buttons[7].setBounds(236, 0, 1110, 110);
-        buttons[7].setHorizontalTextPosition(SwingConstants.CENTER);
-        buttons[7].setForeground(Color.WHITE);
-        buttons[7].setBackground(buttonColor);
-        buttons[7].setBorderPainted(false);
+        buttons[6] = new JButton();
+        buttons[6].setFont(new Font("Century Gothic", Font.BOLD, 40));
+        buttons[6].setBounds(236, 0, 1110, 110);
+        buttons[6].setHorizontalTextPosition(SwingConstants.CENTER);
+        buttons[6].setForeground(Color.WHITE);
+        buttons[6].setBackground(buttonColor);
+        buttons[6].setBorderPainted(false);
 
         return buttons;
     }

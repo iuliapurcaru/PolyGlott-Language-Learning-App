@@ -2,6 +2,7 @@ package pages;
 
 import awt.BuildFrame;
 import awt.Buttons;
+import database.Level;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,13 +23,13 @@ public class LessonExercise extends JFrame {
         try
         {
             BufferedReader reader = new BufferedReader(new FileReader("content/" + language + "/" + lesson + "/" + lesson + ".csv"));
-            String[][] file = new String[numberOfQuestions][7];
+            String[][] file = new String[numberOfQuestions][8];
             while((line = reader.readLine()) != null) {
                 file[currentQuestion] = line.split(",");
                 currentQuestion++;
             }
-            String[][] exercises = new String[7][numberOfQuestions];
-            for(int i = 0; i < 7; i++){
+            String[][] exercises = new String[8][numberOfQuestions];
+            for(int i = 0; i < 8; i++){
                 for(int j = 0; j < numberOfQuestions ; j++){
                     exercises[i][j] = file[j][i];
                 }
@@ -61,10 +62,10 @@ public class LessonExercise extends JFrame {
         frame.add(panel);
 
         JButton[] buttons = Buttons.getButtons(frame, username, language);
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 7; i++) {
             panel.add(buttons[i]);
         }
-        buttons[7].setText("LESSONS");
+        buttons[6].setText("LESSONS");
 
         JLabel questionLabel = new JLabel(exercises[0][currentQuestion]);
         questionLabel.setBounds(280,210,500,35);
@@ -139,6 +140,7 @@ public class LessonExercise extends JFrame {
                     if(Objects.equals(finalCorrectAnswer, choiceAnswer[0])) {
                         optionPaneFont.setText("Correct!");
                         JOptionPane.showMessageDialog(null, optionPaneFont);
+                        Dictionary.addToDictionary(exercises[3 + Integer.parseInt(finalCorrectAnswer)][currentQuestion] + " = " + exercises[7][currentQuestion], language);
                         if(currentQuestion < numberOfQuestions - 1) {
                             frame.dispose();
                             currentQuestion++;
@@ -146,6 +148,7 @@ public class LessonExercise extends JFrame {
                         }
                         else {
                             optionPaneFont.setText("Congratulations! You finished the lesson!      +10XP");
+                            Level.calculateLevel(username, language);
                             JOptionPane.showMessageDialog(null, optionPaneFont);
                             frame.dispose();
                             Lessons.getLessons(username, language);

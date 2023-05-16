@@ -38,7 +38,7 @@ public class LoginCheck {
             }
             connection.close();
         }
-        catch (Exception e){
+        catch (Exception e) {
             e.printStackTrace();
         }
 

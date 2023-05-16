@@ -4,22 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Added exercises">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/beginner/img/bună.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/beginner/img/da.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/beginner/img/man.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/beginner/img/multumesc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/beginner/img/nu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/beginner/img/pa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/beginner/img/woman.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/CalculateLevel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Optimized exercises">
+      <change afterPath="$PROJECT_DIR$/content/ROU/dictionary.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/Level.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/ROU/beginner/beginner.csv" beforeDir="false" afterPath="$PROJECT_DIR$/content/ROU/beginner/beginner.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/awt/Buttons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/awt/Buttons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/CalculateLevel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/LoginCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/LoginCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Homepage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Languages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Languages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/LessonExercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LessonExercise.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Lessons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Lessons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Practice.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +89,9 @@
       <workItem from="1683984839790" duration="82000" />
       <workItem from="1683987945315" duration="6083000" />
       <workItem from="1683999139183" duration="9701000" />
-      <workItem from="1684063164639" duration="32647000" />
+      <workItem from="1684063164639" duration="32737000" />
+      <workItem from="1684171738119" duration="15506000" />
+      <workItem from="1684236300082" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="Built frame">
       <created>1683579882206</created>
@@ -148,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684083142330</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Optimized exercises">
+      <created>1684107791106</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1684107791106</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +183,8 @@
     <MESSAGE value="Repositioned buttons" />
     <MESSAGE value="Added languages" />
     <MESSAGE value="Added exercises" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added exercises" />
+    <MESSAGE value="Optimized exercises" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimized exercises" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
