@@ -32,24 +32,31 @@ public class Lessons extends JFrame {
         chooseLesson.setFont(new Font("Century Gothic", Font.BOLD, 35));
         panel.add(chooseLesson);
 
-        String[] lessons = {"beginner", "animals"};
-        JButton[] lessonButtons = new JButton[2];
-        for(int i = 0; i < 2; i++) {
-            lessonButtons[i] = new JButton(i + 1 + ". " + toUpperCase(lessons[i]));
-            lessonButtons[i].setFont(new Font("Century Gothic", Font.BOLD, 27));
-            lessonButtons[i].setForeground(Color.BLACK);
-            lessonButtons[i].setBackground(buttonColor);
-            lessonButtons[i].setBounds(250 + i * 550,240,450,100);
-            lessonButtons[i].setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-            addButtonMouseAdapter(lessonButtons[i]);
-            int iFinal = i;
-            lessonButtons[i].addActionListener(
-                    e -> {
-                        frame.dispose();
-                        Exercise.getExercise(username, language, lessons[iFinal]);
-                    }
-            );
-            panel.add(lessonButtons[i]);
+        String[] lessons = {"first words", "introductions", "common nouns",
+                            "verbs and greetings", "pronouns and family", "articles and animals",
+                            "adverbs and places", "adjectives and food", "test",
+                            "test", "test", "test"};
+        JButton[] lessonButtons = new JButton[12];
+        int size = 0;
+        for(int j = 0; j < 4; j++) {
+            for (int i = 0; i < 3; i++) {
+                lessonButtons[size] = new JButton(size + 1 + ". " + toUpperCase(lessons[size]));
+                lessonButtons[size].setFont(new Font("Century Gothic", Font.BOLD, 25));
+                lessonButtons[size].setForeground(Color.BLACK);
+                lessonButtons[size].setBackground(buttonColor);
+                lessonButtons[size].setBounds(250 + i * 435, 240 + j * 150, 370, 90);
+                lessonButtons[size].setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+                addButtonMouseAdapter(lessonButtons[size]);
+                int finalSize = size;
+                lessonButtons[size].addActionListener(
+                        e -> {
+                            frame.dispose();
+                            Exercise.getExercise(username, language, lessons[finalSize]);
+                        }
+                );
+                panel.add(lessonButtons[size]);
+                size++;
+            }
         }
     }
 

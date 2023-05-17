@@ -39,7 +39,7 @@ public class Account {
         Font font = new Font("Century Gothic", Font.BOLD, 27);
         Color buttonColor = new Color(245, 117, 5);
 
-        JLabel changeLabel = new JLabel("Change password:");
+        JLabel changeLabel = new JLabel("Change password");
         changeLabel.setBounds(1100,238,800,33);
         changeLabel.setForeground(Color.BLACK);
         changeLabel.setFont(new Font("Century Gothic", Font.BOLD, 30));
@@ -163,7 +163,7 @@ public class Account {
             Connection connection;
             ResultSet resultSet;
             PreparedStatement preparedStatement;
-            String getProgress = "SELECT l.language_name, up.languageID FROM languages l, user_progress up WHERE up.username = ? AND up.languageID = l.languageID";
+            String getProgress = "SELECT l.language_name, up.languageID FROM languages l, user_progress up WHERE up.username = ? AND up.languageID = l.languageID ORDER BY up.language_level DESC";
 
             connection = DatabaseConnection.getConnection();
             preparedStatement = connection.prepareStatement(getProgress);

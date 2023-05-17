@@ -4,16 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Added audio">
+    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Optimized panel">
+      <change afterPath="$PROJECT_DIR$/content/ROU/first words/audio/da.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/first words/audio/la revedere.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/first words/audio/multumesc.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/first words/audio/nu.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/first words/audio/salut.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/first words/first words.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/first words/img/da.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/first words/img/la revedere.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/first words/img/man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/first words/img/multumesc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/first words/img/nu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/first words/img/salut.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/first words/img/woman.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/introductions/introductions.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/flags/DEU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/flags/ITA.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/awt/BuildFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/awt/BuildFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/audio/da.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/audio/la revedere.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/audio/multumesc.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/audio/nu.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/audio/salut.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/beginner.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/img/da.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/img/la revedere.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/img/man.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/img/multumesc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/img/nu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/img/salut.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/img/woman.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/flags/GER.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Exercise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Homepage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Languages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Languages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Lessons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Lessons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +115,7 @@
       <workItem from="1684063164639" duration="32737000" />
       <workItem from="1684171738119" duration="15506000" />
       <workItem from="1684236300082" duration="23876000" />
-      <workItem from="1684323617588" duration="6761000" />
+      <workItem from="1684323617588" duration="19334000" />
     </task>
     <task id="LOCAL-00001" summary="Built frame">
       <created>1683579882206</created>
@@ -175,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684331294577</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Optimized panel">
+      <created>1684332264090</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684332264091</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +239,8 @@
     <MESSAGE value="Added dictionary" />
     <MESSAGE value="Added new type of exercises" />
     <MESSAGE value="Added audio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added audio" />
+    <MESSAGE value="Optimized panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimized panel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
