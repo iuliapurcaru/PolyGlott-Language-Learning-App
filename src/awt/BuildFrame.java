@@ -21,6 +21,14 @@ public class BuildFrame extends JFrame {
         return frame;
     }
 
+    public static JPanel getPanel() {
+        JPanel panel = new JPanel();
+        panel.setLayout(null);
+        panel.setBackground(Color.WHITE);
+
+        return panel;
+    }
+
     public static JLabel getTextLabel(String labelText, int x, int y) {
         JLabel label = new JLabel(labelText);
         label.setBounds(x,y,300,30);

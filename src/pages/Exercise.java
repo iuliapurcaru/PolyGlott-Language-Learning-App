@@ -1,13 +1,18 @@
 package pages;
 
+import awt.Audio;
 import awt.BuildFrame;
 import awt.Buttons;
 import database.Level;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 import java.util.Objects;
+
+import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
 
 public class Exercise extends JFrame {
 
@@ -15,7 +20,7 @@ public class Exercise extends JFrame {
     static Color selectedColor = new Color(245, 212, 66);
     static Color buttonColor = new Color(245, 117, 5);
     static JLabel optionPaneFont = new JLabel();
-    static int numberOfQuestions = 3;
+    static int numberOfQuestions = 12;
 
     public static void getExercise(String username, String language, String lesson) {
 
@@ -25,6 +30,7 @@ public class Exercise extends JFrame {
         {
             BufferedReader reader = new BufferedReader(new FileReader("content/" + language + "/" + lesson + "/" + lesson + ".csv"));
             String[][] file = new String[numberOfQuestions][8];
+            reader.readLine();
             while((line = reader.readLine()) != null) {
                 file[currentQuestion] = line.split(",");
                 currentQuestion++;
@@ -36,7 +42,7 @@ public class Exercise extends JFrame {
                 }
             }
             currentQuestion = 0;
-            showExercises(username, language,exercises);
+            showExercises(username, language,exercises, lesson);
         }
         catch (IOException err)
         {
@@ -44,31 +50,29 @@ public class Exercise extends JFrame {
         }
     }
 
-    public static void showExercises(String username, String language, String[][] exercises) {
+    public static void showExercises(String username, String language, String[][] exercises, String lesson) {
 
         if(Objects.equals(exercises[1][currentQuestion], "multiple")) {
-            multipleChoiceExercise(username, language, exercises);
+            multipleChoiceExercise(username, language, exercises, lesson);
         }
         else if(Objects.equals(exercises[1][currentQuestion], "input")) {
-            inputTextExercise(username, language, exercises);
+            inputTextExercise(username, language, exercises, lesson);
         }
     }
 
-    public static void multipleChoiceExercise(String username, String language, String[][] exercises) {
+    public static void multipleChoiceExercise(String username, String language, String[][] exercises, String lesson) {
 
         optionPaneFont.setFont(new Font("Century Gothic", Font.BOLD, 23));
 
-        JPanel panel = new JPanel();
+        JPanel panel = BuildFrame.getPanel();
         JFrame frame = BuildFrame.getFrame();
-        panel.setLayout(null);
-        panel.setBackground(Color.WHITE);
         frame.add(panel);
 
         JButton[] buttons = Buttons.getButtons(frame, username, language);
         for (int i = 0; i < 7; i++) {
             panel.add(buttons[i]);
         }
-        buttons[6].setText("LESSONS");
+        buttons[6].setText(toUpperCase(lesson));
 
         JLabel questionLabel = new JLabel(exercises[0][currentQuestion]);
         questionLabel.setBounds(280,210,500,35);
@@ -100,6 +104,11 @@ public class Exercise extends JFrame {
                             if (selectedButton[0] != null) {
                                 selectedButton[0].setBackground(buttonColor);
                             }
+                            try {
+                                Audio.playAudio("content/" + language + "/" + lesson + "/audio/" + exercises[choiceNumber + iFinal][currentQuestion] + ".wav");
+                            } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
+                                throw new RuntimeException(ex);
+                            }
                             selectedButton[0] = (JButton) e.getSource();
                             selectedButton[0].setBackground(selectedColor);
                             choiceAnswer[0] = Integer.toString(iFinal);
@@ -113,7 +122,7 @@ public class Exercise extends JFrame {
                 choicesLabels[i].setFont(new Font("Century Gothic", Font.BOLD, 25));
                 panel.add(choicesLabels[i]);
 
-                choice = new ImageIcon("content/ROU/beginner/img/" + exercises[i + 3][currentQuestion] + ".png");
+                choice = new ImageIcon("content/" + language + "/" + lesson + "/img/" + exercises[i + 3][currentQuestion] + ".png");
                 choices[i] = new JButton(choice);
                 choices[i].setBounds(280 + i * 400, 300, 360,360);
                 choices[i].setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -122,6 +131,11 @@ public class Exercise extends JFrame {
                         e -> {
                             if (selectedButton[0] != null) {
                                 selectedButton[0].setEnabled(true);
+                            }
+                            try {
+                                Audio.playAudio("content/" + language + "/" + lesson + "/audio/" + exercises[choiceNumber + iFinal][currentQuestion] + ".wav");
+                            } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
+                                throw new RuntimeException(ex);
                             }
                             selectedButton[0] = (JButton) e.getSource();
                             selectedButton[0].setEnabled(false);
@@ -143,7 +157,7 @@ public class Exercise extends JFrame {
                         if(currentQuestion < numberOfQuestions - 1) {
                             frame.dispose();
                             currentQuestion++;
-                            showExercises(username, language, exercises);
+                            showExercises(username, language, exercises, lesson);
                         }
                         else {
                             optionPaneFont.setText("Congratulations! You finished the lesson!      +10XP");
@@ -162,7 +176,7 @@ public class Exercise extends JFrame {
         panel.add(checkButton);
     }
 
-    public static void inputTextExercise(String username, String language, String[][] exercises) {
+    public static void inputTextExercise(String username, String language, String[][] exercises, String lesson) {
 
         optionPaneFont.setFont(new Font("Century Gothic", Font.BOLD, 23));
 
@@ -203,7 +217,7 @@ public class Exercise extends JFrame {
                         if(currentQuestion < numberOfQuestions - 1) {
                             frame.dispose();
                             currentQuestion++;
-                            showExercises(username, language, exercises);
+                            showExercises(username, language, exercises, lesson);
                         }
                         else {
                             optionPaneFont.setText("Congratulations! You finished the lesson!      +10XP");
