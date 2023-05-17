@@ -17,10 +17,8 @@ public class Account {
 
     public static void getAccount(String username, String language) {
 
-        JPanel panel = new JPanel();
+        JPanel panel = BuildFrame.getPanel();
         JFrame frame = BuildFrame.getFrame();
-        panel.setLayout(null);
-        panel.setBackground(Color.WHITE);
         frame.add(panel);
 
         JLabel optionPaneFont = new JLabel();

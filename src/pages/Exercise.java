@@ -180,10 +180,8 @@ public class Exercise extends JFrame {
 
         optionPaneFont.setFont(new Font("Century Gothic", Font.BOLD, 23));
 
-        JPanel panel = new JPanel();
+        JPanel panel = BuildFrame.getPanel();
         JFrame frame = BuildFrame.getFrame();
-        panel.setLayout(null);
-        panel.setBackground(Color.WHITE);
         frame.add(panel);
 
         JButton[] buttons = Buttons.getButtons(frame, username, language);

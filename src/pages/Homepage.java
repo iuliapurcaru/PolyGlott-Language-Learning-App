@@ -12,10 +12,8 @@ import java.sql.*;
 public class Homepage extends JFrame {
     public static void getHomepage(String username, String language) {
 
-        JPanel panel = new JPanel();
+        JPanel panel = BuildFrame.getPanel();
         JFrame frame = BuildFrame.getFrame();
-        panel.setLayout(null);
-        panel.setBackground(Color.WHITE);
         frame.add(panel);
 
         JButton[] buttons = Buttons.getButtons(frame, username, language);

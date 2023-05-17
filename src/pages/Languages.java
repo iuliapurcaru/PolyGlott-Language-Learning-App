@@ -11,10 +11,8 @@ import java.sql.*;
 public class Languages extends JFrame {
     public static void getLanguages(String username) {
 
-        JPanel panel = new JPanel();
+        JPanel panel = BuildFrame.getPanel();
         JFrame frame = BuildFrame.getFrame();
-        panel.setLayout(null);
-        panel.setBackground(Color.WHITE);
         frame.add(panel);
 
         JButton[] buttons = Buttons.getButtons(frame, username, "");

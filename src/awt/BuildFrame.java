@@ -14,9 +14,9 @@ public class BuildFrame extends JFrame {
         frame.setLocationRelativeTo(null);
         ImageIcon icon = new ImageIcon("img/logo.png");
         frame.setIconImage(icon.getImage());
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
         frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         return frame;
     }

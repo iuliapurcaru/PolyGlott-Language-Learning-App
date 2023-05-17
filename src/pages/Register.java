@@ -8,9 +8,8 @@ import java.awt.*;
 
 public class Register {
     public static void getRegister() {
-        JPanel panel = new JPanel();
+        JPanel panel = BuildFrame.getPanel();
         JFrame frame = BuildFrame.getFrame();
-        panel.setLayout(null);
         frame.add(panel);
 
         JLabel background = new JLabel();
