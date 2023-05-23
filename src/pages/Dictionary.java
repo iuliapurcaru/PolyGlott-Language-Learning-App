@@ -19,10 +19,10 @@ public class Dictionary extends JFrame {
         frame.add(panel);
 
         JButton[] buttons = Buttons.getButtons(frame, username, language);
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 8; i++) {
             panel.add(buttons[i]);
         }
-        buttons[6].setText("DICTIONARY");
+        buttons[7].setText("DICTIONARY");
 
         JLabel dictionaryLabel = new JLabel("Here you can see every word you have learned in lessons");
         dictionaryLabel.setFont(new Font("Century Gothic", Font.BOLD, 28));

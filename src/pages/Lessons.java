@@ -21,10 +21,10 @@ public class Lessons extends JFrame {
         frame.add(panel);
 
         JButton[] buttons = Buttons.getButtons(frame, username, language);
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 8; i++) {
             panel.add(buttons[i]);
         }
-        buttons[6].setText("LESSONS");
+        buttons[7].setText("LESSONS");
 
         JLabel chooseLesson = new JLabel("Choose a Lesson");
         chooseLesson.setBounds(250,160,800,35);

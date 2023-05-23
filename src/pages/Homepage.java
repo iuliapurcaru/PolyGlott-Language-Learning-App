@@ -17,10 +17,10 @@ public class Homepage extends JFrame {
         frame.add(panel);
 
         JButton[] buttons = Buttons.getButtons(frame, username, language);
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 8; i++) {
             panel.add(buttons[i]);
         }
-        buttons[6].setText("HOME");
+        buttons[7].setText("HOME");
 
         try {
             Connection connection;

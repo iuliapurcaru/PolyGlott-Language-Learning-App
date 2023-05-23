@@ -20,9 +20,9 @@ public class Languages extends JFrame {
         JButton[] buttons = Buttons.getButtons(frame, username, "");
         buttons[0].setEnabled(false);
         panel.add(buttons[0]);
-        panel.add(buttons[5]);
         panel.add(buttons[6]);
-        buttons[6].setText("COURSES");
+        panel.add(buttons[7]);
+        buttons[7].setText("COURSES");
 
         JLabel chooseLanguage = new JLabel("Choose a Language Course");
         chooseLanguage.setBounds(100,160,800,35);

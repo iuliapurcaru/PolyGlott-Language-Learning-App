@@ -25,10 +25,10 @@ public class Account {
         optionPaneFont.setFont(new Font("Century Gothic", Font.BOLD, 23));
 
         JButton[] buttons = Buttons.getButtons(frame, username, language);
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 8; i++) {
             panel.add(buttons[i]);
         }
-        buttons[6].setText("MY ACCOUNT");
+        buttons[7].setText("MY ACCOUNT");
 
         JLabel user = new JLabel("Manage your account");
         user.setBounds(1060, 160, 500, 40);

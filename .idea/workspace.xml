@@ -4,40 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Optimized panel">
-      <change afterPath="$PROJECT_DIR$/content/ROU/first words/audio/da.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/first words/audio/la revedere.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/first words/audio/multumesc.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/first words/audio/nu.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/first words/audio/salut.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/first words/first words.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/first words/img/da.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/first words/img/la revedere.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/first words/img/man.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/first words/img/multumesc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/first words/img/nu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/first words/img/salut.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/first words/img/woman.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/ROU/introductions/introductions.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/flags/DEU.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/flags/ITA.png" afterDir="false" />
+    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Added translate exercise">
+      <change afterPath="$PROJECT_DIR$/src/pages/Practice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6591e4b6-3d92-48e2-94e4-b557c0c55aa3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6591e4b6-3d92-48e2-94e4-b557c0c55aa3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/audio/da.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/audio/la revedere.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/audio/multumesc.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/audio/nu.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/audio/salut.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/beginner.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/img/da.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/img/la revedere.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/img/man.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/img/multumesc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/img/nu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/img/salut.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/beginner/img/woman.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/flags/GER.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/introductions/introductions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/content/ROU/introductions/introductions.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/awt/Buttons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/awt/Buttons.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Exercise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Homepage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Languages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Languages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Lessons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Lessons.java" afterDir="false" />
     </list>
@@ -115,7 +92,11 @@
       <workItem from="1684063164639" duration="32737000" />
       <workItem from="1684171738119" duration="15506000" />
       <workItem from="1684236300082" duration="23876000" />
-      <workItem from="1684323617588" duration="19334000" />
+      <workItem from="1684323617588" duration="19589000" />
+      <workItem from="1684513987286" duration="715000" />
+      <workItem from="1684523866050" duration="1164000" />
+      <workItem from="1684525283394" duration="52000" />
+      <workItem from="1684838843849" duration="1208000" />
     </task>
     <task id="LOCAL-00001" summary="Built frame">
       <created>1683579882206</created>
@@ -208,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684332264091</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added translate exercise">
+      <created>1684348072886</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1684348072886</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +228,8 @@
     <MESSAGE value="Added new type of exercises" />
     <MESSAGE value="Added audio" />
     <MESSAGE value="Optimized panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimized panel" />
+    <MESSAGE value="Added translate exercise" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added translate exercise" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
