@@ -55,26 +55,31 @@ public class Homepage extends JFrame {
         int level = Level.getLevel(username, language);
         int exp = Level.getExp(username, language);
 
-        JLabel languageLevel = new JLabel();
+        JLabel languageLevel = new JLabel("Level " + level);
         languageLevel.setBounds(270, 190, 500, 120);
         languageLevel.setFont(infoFont);
         languageLevel.setForeground(Color.BLACK);
-        languageLevel.setText("Level " + level);
         panel.add(languageLevel);
 
-        JLabel languageXP = new JLabel();
+        JLabel languageXP = new JLabel("XP until next level: " + ((level + 1) * 100 - exp));
         languageXP.setBounds(270, 250, 500, 120);
         languageXP.setFont(infoFont);
         languageXP.setForeground(Color.BLACK);
-        languageXP.setText("XP until next level: " + ((level + 1) * 100 - exp));
         panel.add(languageXP);
 
-        JLabel lastLesson = new JLabel();
+        JLabel lastLesson = new JLabel("Last lesson: ");
         lastLesson.setBounds(270, 310, 500, 120);
         lastLesson.setFont(infoFont);
         lastLesson.setForeground(Color.BLACK);
-        lastLesson.setText("Last lesson: ");
         panel.add(lastLesson);
+
+        JLabel wordsLearned = new JLabel("Words in dictionary: " + Dictionary.countWords(username, language));
+        wordsLearned.setBounds(270, 370, 500, 120);
+        wordsLearned.setFont(infoFont);
+        wordsLearned.setForeground(Color.BLACK);
+        panel.add(wordsLearned);
+
+
     }
 
 }

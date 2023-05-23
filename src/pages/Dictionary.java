@@ -6,7 +6,6 @@ import database.DatabaseConnection;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -117,13 +116,29 @@ public class Dictionary extends JFrame {
         }
     }
 
-    public static int getCountWords(String language) {
+    public static int countWords(String username, String language) {
         int words = 0;
-        try (BufferedReader reader = new BufferedReader(new FileReader("content/" + language + "/dictionary.csv"))) {
-            while ((reader.readLine()) != null) {
-                words++;
+
+        Connection connection;
+        String searchWord = "SELECT COUNT(*) FROM user_dictionary WHERE username = ? AND languageID = ?";
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
+
+        try {
+            connection = DatabaseConnection.getConnection();
+
+            preparedStatement = connection.prepareStatement(searchWord);
+            preparedStatement.setString(1, username);
+            preparedStatement.setString(2, language);
+            resultSet = preparedStatement.executeQuery();
+
+            if(resultSet.next()) {
+                words = resultSet.getInt(1);
             }
-        } catch (IOException e) {
+
+            connection.close();
+        }
+        catch (Exception e){
             e.printStackTrace();
         }
         return words;

@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Added translate exercise">
-      <change afterPath="$PROJECT_DIR$/src/pages/Practice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Added Practice page">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/6591e4b6-3d92-48e2-94e4-b557c0c55aa3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6591e4b6-3d92-48e2-94e4-b557c0c55aa3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/ROU/introductions/introductions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/content/ROU/introductions/introductions.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/awt/Buttons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/awt/Buttons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Exercise.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Homepage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Languages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Languages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Lessons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Lessons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Practice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +91,8 @@
       <workItem from="1684513987286" duration="715000" />
       <workItem from="1684523866050" duration="1164000" />
       <workItem from="1684525283394" duration="52000" />
-      <workItem from="1684838843849" duration="1208000" />
+      <workItem from="1684838843849" duration="1881000" />
+      <workItem from="1684869741121" duration="5775000" />
     </task>
     <task id="LOCAL-00001" summary="Built frame">
       <created>1683579882206</created>
@@ -196,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684348072886</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added Practice page">
+      <created>1684841646717</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1684841646717</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +232,8 @@
     <MESSAGE value="Added audio" />
     <MESSAGE value="Optimized panel" />
     <MESSAGE value="Added translate exercise" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added translate exercise" />
+    <MESSAGE value="Added Practice page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Practice page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

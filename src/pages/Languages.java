@@ -25,7 +25,7 @@ public class Languages extends JFrame {
         buttons[7].setText("COURSES");
 
         JLabel chooseLanguage = new JLabel("Choose a Language Course");
-        chooseLanguage.setBounds(100,160,800,35);
+        chooseLanguage.setBounds(100,160,800,40);
         chooseLanguage.setForeground(Color.BLACK);
         chooseLanguage.setFont(new Font("Century Gothic", Font.BOLD, 35));
         panel.add(chooseLanguage);
