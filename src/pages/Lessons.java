@@ -7,14 +7,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
 
 import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
 
 public class Lessons extends JFrame {
 
-    static Color buttonColor = new Color(245, 212, 66);
-    static Color mouseEnteredColor = new Color(255, 143, 23);
     public static void getLessons(String username, String language) {
+
+        JLabel optionPaneFont = new JLabel();
+        optionPaneFont.setFont(new Font("Century Gothic", Font.BOLD, 23));
 
         JPanel panel = BuildFrame.getPanel();
         JFrame frame = BuildFrame.getFrame();
@@ -43,13 +45,20 @@ public class Lessons extends JFrame {
                 lessonButtons[size] = new JButton(size + 1 + ". " + toUpperCase(lessons[size]));
                 lessonButtons[size].setFont(new Font("Century Gothic", Font.BOLD, 25));
                 lessonButtons[size].setForeground(Color.BLACK);
-                lessonButtons[size].setBackground(buttonColor);
+                lessonButtons[size].setBackground(Buttons.yellowButtonColor);
                 lessonButtons[size].setBounds(250 + i * 435, 240 + j * 150, 370, 90);
                 lessonButtons[size].setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
                 addButtonMouseAdapter(lessonButtons[size]);
                 int finalSize = size;
                 lessonButtons[size].addActionListener(
                         e -> {
+                            File tmpDir = new File("content/" + language + "/" + lessons[finalSize] + "/" + lessons[finalSize] + ".csv");
+                            if(!tmpDir.exists()) {
+                                optionPaneFont.setText("Coming soon");
+                                JOptionPane.showMessageDialog(null, optionPaneFont);
+                                return;
+                            }
+
                             frame.dispose();
                             Exercise.getExercise(username, language, lessons[finalSize]);
                         }
@@ -63,10 +72,10 @@ public class Lessons extends JFrame {
     public static void addButtonMouseAdapter(JButton button) {
         button.addMouseListener(new MouseAdapter() {
             public void mouseEntered(MouseEvent evt) {
-                button.setBackground(mouseEnteredColor);
+                button.setBackground(Buttons.mouseEnteredColor);
             }
             public void mouseExited(MouseEvent evt) {
-                button.setBackground(buttonColor);
+                button.setBackground(Buttons.yellowButtonColor);
             }
         });
 

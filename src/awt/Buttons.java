@@ -8,8 +8,9 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class Buttons {
-    static Color buttonColor = new Color(245, 117, 5);
-    static Color mouseEnteredColor = new Color(255, 143, 23);
+    public static Color orangeButtonColor = new Color(245, 117, 5);
+    public static Color mouseEnteredColor = new Color(255, 143, 23);
+    public static Color yellowButtonColor = new Color(245, 212, 66);
 
     public static JButton[] getButtons(JFrame frame, String username, String language) {
         JButton[] buttons = new JButton[8];
@@ -99,7 +100,7 @@ public class Buttons {
             buttons[i].setVerticalTextPosition(SwingConstants.BOTTOM);
             buttons[i].setHorizontalTextPosition(SwingConstants.CENTER);
             buttons[i].setForeground(Color.WHITE);
-            buttons[i].setBackground(buttonColor);
+            buttons[i].setBackground(orangeButtonColor);
             buttons[i].setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
             buttons[i].setBorderPainted(false);
             addButtonMouseAdapter(buttons[i]);
@@ -110,7 +111,7 @@ public class Buttons {
         buttons[7].setBounds(236, 0, 1110, 110);
         buttons[7].setHorizontalTextPosition(SwingConstants.CENTER);
         buttons[7].setForeground(Color.WHITE);
-        buttons[7].setBackground(buttonColor);
+        buttons[7].setBackground(orangeButtonColor);
         buttons[7].setBorderPainted(false);
 
         return buttons;
@@ -122,7 +123,7 @@ public class Buttons {
                 button.setBackground(mouseEnteredColor);
             }
             public void mouseExited(MouseEvent evt) {
-                button.setBackground(buttonColor);
+                button.setBackground(orangeButtonColor);
             }
         });
 

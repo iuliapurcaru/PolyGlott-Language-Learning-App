@@ -37,7 +37,6 @@ public class Account {
         panel.add(user);
 
         Font font = new Font("Century Gothic", Font.BOLD, 27);
-        Color buttonColor = new Color(245, 117, 5);
 
         JLabel changeLabel = new JLabel("Change password");
         changeLabel.setBounds(1100,238,800,33);
@@ -70,7 +69,7 @@ public class Account {
         changePassword.setFont(new Font("Century Gothic", Font.BOLD, 23));
         changePassword.setBounds(1100,520, 300,50);
         changePassword.setForeground(Color.WHITE);
-        changePassword.setBackground(buttonColor);
+        changePassword.setBackground(Buttons.orangeButtonColor);
         changePassword.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         changePassword.addActionListener(
                 e -> {

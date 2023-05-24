@@ -17,18 +17,17 @@ import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
 public class Exercise extends JFrame {
 
     static int currentQuestion;
-    static Color selectedColor = new Color(245, 212, 66);
-    static Color buttonColor = new Color(245, 117, 5);
     static JLabel optionPaneFont = new JLabel();
     static int numberOfQuestions = 12;
 
-    public static void getExercise(String username, String language, String lesson) {
+    public static void getExercise(String username, String language, String title) {
+
 
         currentQuestion = 0;
         String line;
         try
         {
-            BufferedReader reader = new BufferedReader(new FileReader("content/" + language + "/" + lesson + "/" + lesson + ".csv"));
+            BufferedReader reader = new BufferedReader(new FileReader("content/" + language + "/" + title + "/" + title + ".csv"));
             String[][] file = new String[numberOfQuestions][9];
             reader.readLine();
             while((line = reader.readLine()) != null) {
@@ -42,7 +41,7 @@ public class Exercise extends JFrame {
                 }
             }
             currentQuestion = 0;
-            showExercises(username, language,exercises, lesson);
+            showExercises(username, language,exercises, title);
         }
         catch (IOException err)
         {
@@ -99,13 +98,13 @@ public class Exercise extends JFrame {
                 choices[i].setFont(new Font("Century Gothic", Font.BOLD, 25));
                 choices[i].setBounds(300 + i * 250, 430, 200, 100);
                 choices[i].setForeground(Color.BLACK);
-                choices[i].setBackground(buttonColor);
+                choices[i].setBackground(Buttons.orangeButtonColor);
                 choices[i].setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
                 int iFinal = i;
                 choices[i].addActionListener(
                         e -> {
                             if (selectedButton[0] != null) {
-                                selectedButton[0].setBackground(buttonColor);
+                                selectedButton[0].setBackground(Buttons.orangeButtonColor);
                             }
                             try {
                                 Audio.playAudio("content/" + language + "/" + lesson + "/audio/" + exercises[choiceNumber + iFinal + 1][currentQuestion] + ".wav");
@@ -113,7 +112,7 @@ public class Exercise extends JFrame {
                                 throw new RuntimeException(ex);
                             }
                             selectedButton[0] = (JButton) e.getSource();
-                            selectedButton[0].setBackground(selectedColor);
+                            selectedButton[0].setBackground(Buttons.yellowButtonColor);
                             choiceAnswer[0] = Integer.toString(iFinal);
                         }
                 );
@@ -222,7 +221,7 @@ public class Exercise extends JFrame {
             playAudioButton.setFont(new Font("Century Gothic", Font.BOLD, 27));
             playAudioButton.setBounds(750, 300, 170,70);
             playAudioButton.setForeground(Color.BLACK);
-            playAudioButton.setBackground(selectedColor);
+            playAudioButton.setBackground(Buttons.yellowButtonColor);
             playAudioButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
             playAudioButton.addActionListener(
                     e -> {
@@ -252,8 +251,8 @@ public class Exercise extends JFrame {
                             showExercises(username, language, exercises, lesson);
                         }
                         else {
-                            optionPaneFont.setText("Congratulations! You finished the lesson!      +10XP");
                             Level.calculateLevel(username, language);
+                            optionPaneFont.setText("Congratulations! You finished the lesson!      +10XP");
                             JOptionPane.showMessageDialog(null, optionPaneFont);
                             frame.dispose();
                             Lessons.getLessons(username, language);
@@ -273,7 +272,7 @@ public class Exercise extends JFrame {
         checkButton.setFont(new Font("Century Gothic", Font.BOLD, 27));
         checkButton.setBounds(300, y, 170,70);
         checkButton.setForeground(Color.BLACK);
-        checkButton.setBackground(selectedColor);
+        checkButton.setBackground(Buttons.yellowButtonColor);
         checkButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
         return checkButton;

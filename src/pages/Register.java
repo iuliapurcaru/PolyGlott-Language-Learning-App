@@ -1,6 +1,6 @@
 package pages;
 
-import awt.BuildFrame;
+import awt.*;
 import database.RegisterAccount;
 
 import javax.swing.*;
@@ -53,13 +53,12 @@ public class Register {
         JPasswordField confirmPasswordField = BuildFrame.getPasswordField(140, 562);
         panel.add(confirmPasswordField);
 
-        Color buttonColor = new Color(245, 117, 5);
         JButton registerButton;
         registerButton = new JButton("REGISTER");
         registerButton.setFont(textFont);
         registerButton.setBounds(140,630, 150,50);
         registerButton.setForeground(Color.WHITE);
-        registerButton.setBackground(buttonColor);
+        registerButton.setBackground(Buttons.orangeButtonColor);
         registerButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         registerButton.addActionListener(
                 e -> RegisterAccount.registerAccount(usernameField.getText(),
@@ -82,7 +81,7 @@ public class Register {
         signInButton.setFont(new Font("Century Gothic", Font.PLAIN, 27));
         signInButton.setBounds(140,790,150,50);
         signInButton.setForeground(Color.WHITE);
-        signInButton.setBackground(buttonColor);
+        signInButton.setBackground(Buttons.orangeButtonColor);
         signInButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         signInButton.addActionListener(
                 e -> {

@@ -1,6 +1,6 @@
 package pages;
 
-import awt.BuildFrame;
+import awt.*;
 import database.LoginCheck;
 
 import java.awt.*;
@@ -53,12 +53,11 @@ public class Login extends JFrame {
         JPasswordField passwordField = BuildFrame.getPasswordField(140, 452);
         panel.add(passwordField);
 
-        Color buttonColor = new Color(245, 117, 5);
         JButton signInButton = new JButton("SIGN IN");
         signInButton.setFont(textFont);
         signInButton.setBounds(140,520, 150,50);
         signInButton.setForeground(Color.WHITE);
-        signInButton.setBackground(buttonColor);
+        signInButton.setBackground(Buttons.orangeButtonColor);
         signInButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         signInButton.addActionListener(
                 e -> LoginCheck.loginCheck(usernameField.getText(), String.valueOf(passwordField.getPassword()), frame)
@@ -76,7 +75,7 @@ public class Login extends JFrame {
         registerButton.setFont(new Font("Century Gothic", Font.PLAIN, 27));
         registerButton.setBounds(140,690, 150,50);
         registerButton.setForeground(Color.WHITE);
-        registerButton.setBackground(buttonColor);
+        registerButton.setBackground(Buttons.orangeButtonColor);
         registerButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         registerButton.addActionListener(
                 e -> {
