@@ -4,16 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Added Practice page">
+    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Clean up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/awt/Buttons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/awt/Buttons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/first words/audio/da.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/first words/audio/la revedere.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/first words/audio/multumesc.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/first words/audio/nu.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/first words/audio/salut.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/first words/first words.csv" beforeDir="false" afterPath="$PROJECT_DIR$/content/ROU/first words/first words.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/introductions/audio/audio0.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/introductions/introductions.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/awt/Audio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/awt/Audio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Exercise.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Languages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Languages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Lessons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Lessons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Practice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Register.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +99,8 @@
       <workItem from="1684525283394" duration="52000" />
       <workItem from="1684838843849" duration="1881000" />
       <workItem from="1684869741121" duration="5829000" />
-      <workItem from="1684918630376" duration="3872000" />
+      <workItem from="1684918630376" duration="3974000" />
+      <workItem from="1685205899522" duration="4506000" />
     </task>
     <task id="LOCAL-00001" summary="Built frame">
       <created>1683579882206</created>
@@ -209,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684879547910</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Clean up">
+      <created>1684922683998</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1684922683998</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +255,8 @@
     <MESSAGE value="Optimized panel" />
     <MESSAGE value="Added translate exercise" />
     <MESSAGE value="Added Practice page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Practice page" />
+    <MESSAGE value="Clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

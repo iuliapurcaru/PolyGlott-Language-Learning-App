@@ -2,12 +2,10 @@
 Which one of these is "hello"?,,multiple,img,salut,la revedere,multumesc,0,hello
 Which one of these is "thank you"?,,multiple,img,la revedere,salut,multumesc,2,thank you
 Which one of these is "goodbye"?,,multiple,img,salut,multumesc,la revedere,2,goodbye
-How do you say "thank you"?,,multiple,text,salut,multumesc,la revedere,1,thank you
-How do you say "hello"?,,multiple,text,salut,la revedere,multumesc,0,hello
-How do you say "goodbye"?,,multiple,text,salut,multumesc,la revedere,2,goodbye
+How do you say "thank you"?,,multiple,text,salut,multumesc,la revedere,1, 
+How do you say "hello"?,,multiple,text,salut,la revedere,multumesc,0, 
+How do you say "goodbye"?,,multiple,text,salut,multumesc,la revedere,2, 
 Which one of these is "yes"?,,multiple,img,multumesc,da,nu,1,yes
 Which one of these is "no"?,,multiple,img,nu,salut,da,0,no
-How do you say "yes"?,,multiple,text,salut,multumesc,da,2,yes
-How do you say "no"?,,multiple,text,nu,la revedere,multumesc,0,no
-How do you say "thank you"?,,input,text,,,,multumesc,thank you
-How do you say "goodbye"?,,input,text,,,,la revedere,goodbye
+How do you say "yes"?,,multiple,text,salut,multumesc,da,2, 
+How do you say "no"?,,multiple,text,nu,la revedere,multumesc,0, 

@@ -41,7 +41,7 @@ public class Practice {
         addButtonMouseAdapter(practiceButton);
         practiceButton.addActionListener(
                 e -> {
-                    File tmpDir = new File("content/" + language + "/practice/level" + Level.getLevel(username, language) + ".csv");
+                    File tmpDir = new File("content/" + language + "/level" + Level.getLevel(username, language) + "/level" + Level.getLevel(username, language) + ".csv");
                     if(!tmpDir.exists()) {
                         optionPaneFont.setText("Coming soon");
                         JOptionPane.showMessageDialog(null, optionPaneFont);

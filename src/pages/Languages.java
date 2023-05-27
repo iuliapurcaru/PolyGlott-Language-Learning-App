@@ -75,7 +75,7 @@ public class Languages extends JFrame {
         for(int i = 0; i < numberOfLanguages; i++) {
             languageButtons[i].setBounds(130 + i * 280, 220, 180, 120);
             panel.add(languageButtons[i]);
-            languages[i].setBounds(120 + i * 280, 340, 130, 40);
+            languages[i].setBounds(130 + i * 280, 340, 130, 40);
             languages[i].setFont(new Font("Century Gothic", Font.BOLD, 25));
             panel.add(languages[i]);
         }

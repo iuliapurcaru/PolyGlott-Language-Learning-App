@@ -18,7 +18,7 @@ public class Exercise extends JFrame {
 
     static int currentQuestion;
     static JLabel optionPaneFont = new JLabel();
-    static int numberOfQuestions = 12;
+    static int numberOfQuestions = 10;
 
     public static void getExercise(String username, String language, String title) {
 
@@ -107,7 +107,7 @@ public class Exercise extends JFrame {
                                 selectedButton[0].setBackground(Buttons.orangeButtonColor);
                             }
                             try {
-                                Audio.playAudio("content/" + language + "/" + lesson + "/audio/" + exercises[choiceNumber + iFinal + 1][currentQuestion] + ".wav");
+                                Audio.playAudio(exercises[choiceNumber + iFinal + 1][currentQuestion] + ".wav");
                             } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
                                 throw new RuntimeException(ex);
                             }
@@ -135,7 +135,7 @@ public class Exercise extends JFrame {
                                 selectedButton[0].setEnabled(true);
                             }
                             try {
-                                Audio.playAudio("content/" + language + "/" + lesson + "/audio/" + exercises[choiceNumber + iFinal + 1][currentQuestion] + ".wav");
+                                Audio.playAudio(exercises[choiceNumber + iFinal + 1][currentQuestion] + ".wav");
                             } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
                                 throw new RuntimeException(ex);
                             }
@@ -217,16 +217,19 @@ public class Exercise extends JFrame {
         String finalCorrectAnswer = correctAnswer;
 
         if(Objects.equals(exercises[3][currentQuestion], "translate")) {
-            JButton playAudioButton = new JButton("CHECK");
-            playAudioButton.setFont(new Font("Century Gothic", Font.BOLD, 27));
-            playAudioButton.setBounds(750, 300, 170,70);
+            ImageIcon icon = new ImageIcon("img/buttons/audio2.png");
+            JButton playAudioButton = new JButton("PLAY AUDIO", icon);
+            playAudioButton.setFont(new Font("Century Gothic", Font.BOLD, 23));
+            playAudioButton.setVerticalTextPosition(SwingConstants.BOTTOM);
+            playAudioButton.setHorizontalTextPosition(SwingConstants.CENTER);
+            playAudioButton.setBounds(750, 280, 170,110);
             playAudioButton.setForeground(Color.BLACK);
             playAudioButton.setBackground(Buttons.yellowButtonColor);
             playAudioButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
             playAudioButton.addActionListener(
                     e -> {
                         try {
-                            Audio.playAudio("content/" + language + "/" + lesson + "/audio/audio" + currentQuestion + ".wav");
+                            Audio.playAudio("audio_" + lesson + "_" + currentQuestion + ".wav");
                         } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
                             throw new RuntimeException(ex);
                         }
