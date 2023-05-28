@@ -4,6 +4,7 @@ import awt.BuildFrame;
 import awt.Buttons;
 import database.DatabaseConnection;
 import database.Level;
+import database.AccountOperations;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -52,6 +53,7 @@ public class Account {
         JPasswordField passwordField = new JPasswordField();
         passwordField.setBounds(1100,320,300,40);
         passwordField.setFont(new Font("Century Gothic", Font.PLAIN, 20));
+        passwordField.setBackground(new Color(247,247,247));
         panel.add(passwordField);
 
         JLabel confirmNewPassword = new JLabel("Confirm new password");
@@ -63,6 +65,7 @@ public class Account {
         confirmPassword = new JPasswordField();
         confirmPassword.setBounds(1100,432,300,40);
         confirmPassword.setFont(new Font("Century Gothic", Font.PLAIN, 20));
+        confirmPassword.setBackground(new Color(247,247,247));
         panel.add(confirmPassword);
 
         JButton changePassword = new JButton("CHANGE PASSWORD");
@@ -83,26 +86,7 @@ public class Account {
                     }
                     else {
 
-                        Connection connection;
-                        PreparedStatement preparedStatement;
-                        String updateUser = "UPDATE users SET password = ? WHERE username = ?";
-                        //UIManager.put("OptionPane.minimumSize", new Dimension(100, 50));
-
-                        try {
-                            connection = DatabaseConnection.getConnection();
-                            preparedStatement = connection.prepareStatement(updateUser);
-                            preparedStatement.setString(1, String.valueOf(passwordField.getPassword()));
-                            preparedStatement.setString(2, username);
-                            preparedStatement.executeUpdate();
-
-                            connection.close();
-                        } catch (Exception err) {
-                            err.printStackTrace();
-                        }
-
-                        optionPaneFont.setText("Password successfully changed!");
-                        JOptionPane.showMessageDialog(null, optionPaneFont);
-
+                        AccountOperations.updatePassword(username, String.valueOf(passwordField.getPassword()));
                     }
 
                 }
@@ -120,22 +104,7 @@ public class Account {
                     optionPaneFont.setText("Are you sure you want to delete your account?");
                     int input = JOptionPane.showConfirmDialog(null, optionPaneFont);
                     if (input == 0) {
-                        Connection connection;
-                        PreparedStatement preparedStatement;
-                        String deleteUser = "DELETE FROM users WHERE username = ?";
-                        UIManager.put("OptionPane.minimumSize", new Dimension(100, 50));
-
-                        try {
-                            connection = DatabaseConnection.getConnection();
-                            preparedStatement = connection.prepareStatement(deleteUser);
-                            preparedStatement.setString(1, username);
-                            preparedStatement.executeUpdate();
-
-                            connection.close();
-                        } catch (Exception err) {
-                            err.printStackTrace();
-                        }
-
+                        AccountOperations.deleteAccount(username);
                         frame.dispose();
                         Login.getLogin();
                     }
@@ -220,33 +189,5 @@ public class Account {
         }
     }
 
-    public static void checkCourse(String username, String languageID) {
 
-        Connection connection;
-        ResultSet resultSetUser;
-        PreparedStatement preparedStatementUser;
-        String checkUser = "SELECT username, languageID FROM user_progress WHERE username = ? and languageID = ?";
-
-        try {
-            connection = DatabaseConnection.getConnection();
-
-            preparedStatementUser = connection.prepareStatement(checkUser);
-            preparedStatementUser.setString(1, username);
-            preparedStatementUser.setString(2, languageID);
-            resultSetUser = preparedStatementUser.executeQuery();
-
-            if (!resultSetUser.next()) {
-                String insertUser = "INSERT INTO user_progress (username, languageID) VALUES (?, ?)";
-                PreparedStatement preparedStatement;
-                preparedStatement = connection.prepareStatement(insertUser);
-                preparedStatement.setString(1, username);
-                preparedStatement.setString(2, languageID);
-                preparedStatement.executeUpdate();
-            }
-            connection.close();
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-    }
 }

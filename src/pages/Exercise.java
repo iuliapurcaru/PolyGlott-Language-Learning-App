@@ -107,7 +107,7 @@ public class Exercise extends JFrame {
                                 selectedButton[0].setBackground(Buttons.orangeButtonColor);
                             }
                             try {
-                                Audio.playAudio(exercises[choiceNumber + iFinal + 1][currentQuestion] + ".wav");
+                                Audio.playAudio(exercises[choiceNumber + iFinal + 1][currentQuestion] + ".wav", language);
                             } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
                                 throw new RuntimeException(ex);
                             }
@@ -135,7 +135,7 @@ public class Exercise extends JFrame {
                                 selectedButton[0].setEnabled(true);
                             }
                             try {
-                                Audio.playAudio(exercises[choiceNumber + iFinal + 1][currentQuestion] + ".wav");
+                                Audio.playAudio(exercises[choiceNumber + iFinal + 1][currentQuestion] + ".wav", language);
                             } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
                                 throw new RuntimeException(ex);
                             }
@@ -229,7 +229,7 @@ public class Exercise extends JFrame {
             playAudioButton.addActionListener(
                     e -> {
                         try {
-                            Audio.playAudio("audio_" + lesson + "_" + currentQuestion + ".wav");
+                            Audio.playAudio("audio_" + lesson + "_" + currentQuestion + ".wav", language);
                         } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
                             throw new RuntimeException(ex);
                         }

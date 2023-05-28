@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Clean up">
+    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Optimised Practice">
+      <change afterPath="$PROJECT_DIR$/src/database/AccountOperations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/first words/audio/da.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/first words/audio/la revedere.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/first words/audio/multumesc.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/first words/audio/nu.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/first words/audio/salut.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/first words/first words.csv" beforeDir="false" afterPath="$PROJECT_DIR$/content/ROU/first words/first words.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/introductions/audio/audio0.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/ROU/introductions/introductions.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/awt/Audio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/awt/Audio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/mysql-connector-java-8.0.22.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/zlib/mysql-connector-java-8.0.22.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Exercise.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Languages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Languages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Practice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,31 +42,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Uni stuff/An 3/Sem 2/AM/Proiect/Language Learning App/content/database&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Uni stuff/An 3/Sem 2/AM/Proiect/Language Learning App/content/database",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;,
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -100,7 +95,8 @@
       <workItem from="1684838843849" duration="1881000" />
       <workItem from="1684869741121" duration="5829000" />
       <workItem from="1684918630376" duration="3974000" />
-      <workItem from="1685205899522" duration="4506000" />
+      <workItem from="1685205899522" duration="5629000" />
+      <workItem from="1685304913342" duration="6757000" />
     </task>
     <task id="LOCAL-00001" summary="Built frame">
       <created>1683579882206</created>
@@ -221,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684922683998</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Optimised Practice">
+      <created>1685226619217</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1685226619217</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +259,8 @@
     <MESSAGE value="Added translate exercise" />
     <MESSAGE value="Added Practice page" />
     <MESSAGE value="Clean up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean up" />
+    <MESSAGE value="Optimised Practice" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimised Practice" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

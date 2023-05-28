@@ -1,8 +1,10 @@
 package pages;
 
+
 import awt.BuildFrame;
 import awt.Buttons;
 import database.DatabaseConnection;
+import database.AccountOperations;
 
 import javax.swing.*;
 import java.awt.*;
@@ -59,7 +61,7 @@ public class Languages extends JFrame {
                 int iFinal = i;
                 languageButtons[i].addActionListener(
                         e -> {
-                            Account.checkCourse(username, languageID[iFinal]);
+                            AccountOperations.checkCourse(username, languageID[iFinal]);
                             frame.dispose();
                             Homepage.getHomepage(username, languageID[iFinal]);
                         }
