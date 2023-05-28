@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Optimised Practice">
-      <change afterPath="$PROJECT_DIR$/src/database/AccountOperations.java" afterDir="false" />
+    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Optimized Account">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/awt/Audio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/awt/Audio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/mysql-connector-java-8.0.22.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/zlib/mysql-connector-java-8.0.22.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Exercise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Languages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Languages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/zlib/mysql-connector-java-8.0.22.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/mysql-connector-java-8.0.22.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +91,7 @@
       <workItem from="1684869741121" duration="5829000" />
       <workItem from="1684918630376" duration="3974000" />
       <workItem from="1685205899522" duration="5629000" />
-      <workItem from="1685304913342" duration="6757000" />
+      <workItem from="1685304913342" duration="8114000" />
     </task>
     <task id="LOCAL-00001" summary="Built frame">
       <created>1683579882206</created>
@@ -224,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685226619217</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Optimized Account">
+      <created>1685314361932</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1685314361932</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +262,8 @@
     <MESSAGE value="Added Practice page" />
     <MESSAGE value="Clean up" />
     <MESSAGE value="Optimised Practice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimised Practice" />
+    <MESSAGE value="Optimized Account" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimized Account" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
