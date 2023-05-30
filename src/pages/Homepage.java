@@ -9,7 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.sql.*;
 
-public class Homepage extends JFrame {
+public class Homepage {
     public static void getHomepage(String username, String language) {
 
         JPanel panel = BuildFrame.getPanel();
@@ -67,7 +67,7 @@ public class Homepage extends JFrame {
         languageXP.setForeground(Color.BLACK);
         panel.add(languageXP);
 
-        JLabel lastLesson = new JLabel("Last lesson: ");
+        JLabel lastLesson = new JLabel("Last lesson: FIRST WORDS");
         lastLesson.setBounds(270, 310, 500, 120);
         lastLesson.setFont(infoFont);
         lastLesson.setForeground(Color.BLACK);

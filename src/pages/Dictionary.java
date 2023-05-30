@@ -10,7 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class Dictionary extends JFrame {
+public class Dictionary {
     public static void getDictionary(String username, String language) {
 
         JPanel panel = BuildFrame.getPanel();

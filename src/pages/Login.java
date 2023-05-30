@@ -6,7 +6,7 @@ import database.LoginCheck;
 import java.awt.*;
 import javax.swing.*;
 
-public class Login extends JFrame {
+public class Login {
 
     public static void getLogin() {
         JPanel panel = new JPanel();
@@ -85,19 +85,6 @@ public class Login extends JFrame {
 
         );
         panel.add(registerButton);
-
-        JButton guestButton;
-        guestButton = new JButton();
-        guestButton.setBounds(0,0,50,50);
-        guestButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        guestButton.addActionListener(
-                e -> {
-                    frame.dispose();
-                    Languages.getLanguages("a");
-                }
-
-        );
-        panel.add(guestButton);
 
         frame.setVisible(true);
     }

@@ -10,7 +10,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.sql.*;
 
-public class Languages extends JFrame {
+public class Languages {
 
     static int numberOfLanguages = 5;
     public static void getLanguages(String username) {

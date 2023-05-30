@@ -11,7 +11,7 @@ import java.io.File;
 
 import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
 
-public class Lessons extends JFrame {
+public class Lessons {
 
     public static void getLessons(String username, String language) {
 
@@ -36,13 +36,13 @@ public class Lessons extends JFrame {
 
         String[] lessons = {"first words", "introductions", "common nouns",
                             "verbs and greetings", "pronouns and family", "articles and animals",
-                            "adverbs and places", "adjectives and food", "test",
-                            "test", "test", "test"};
+                            "adverbs and clothes", "days and months", "time and place",
+                            "prepositions and drinks", "adjectives and food", "numbers and colors"};
         JButton[] lessonButtons = new JButton[12];
         int size = 0;
         for(int j = 0; j < 4; j++) {
             for (int i = 0; i < 3; i++) {
-                lessonButtons[size] = new JButton(size + 1 + ". " + toUpperCase(lessons[size]));
+                lessonButtons[size] = new JButton(toUpperCase(lessons[size]));
                 lessonButtons[size].setFont(new Font("Century Gothic", Font.BOLD, 25));
                 lessonButtons[size].setForeground(Color.BLACK);
                 lessonButtons[size].setBackground(Buttons.yellowButtonColor);

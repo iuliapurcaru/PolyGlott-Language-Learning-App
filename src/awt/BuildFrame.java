@@ -3,7 +3,7 @@ package awt;
 import javax.swing.*;
 import java.awt.*;
 
-public class BuildFrame extends JFrame {
+public class BuildFrame {
 
     public static JFrame getFrame() {
 

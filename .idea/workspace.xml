@@ -4,9 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Optimized Account">
+    <list default="true" id="897035b3-07e3-4f3f-8184-50d1d8107806" name="Changes" comment="Clean up">
+      <change afterPath="$PROJECT_DIR$/content/ROU/audio/audio_level0_3.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/audio/audio_level0_4.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/img/da.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/img/la revedere.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/img/multumesc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/img/nu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/ROU/img/salut.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/zlib/mysql-connector-java-8.0.22.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/mysql-connector-java-8.0.22.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/first words/img/da.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/first words/img/la revedere.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/first words/img/man.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/first words/img/multumesc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/first words/img/nu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/first words/img/salut.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/first words/img/woman.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/ROU/level0/level0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/content/ROU/level0/level0.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/awt/Audio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/awt/Audio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/awt/BuildFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/awt/BuildFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Exercise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Homepage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Languages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Languages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Lessons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Lessons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,16 +66,16 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Uni stuff/An 3/Sem 2/AM/Proiect/Language Learning App/content/database",
+    "last_opened_file_path": "D:/Uni stuff/An 3/Sem 2/AM/Proiect",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -91,7 +113,11 @@
       <workItem from="1684869741121" duration="5829000" />
       <workItem from="1684918630376" duration="3974000" />
       <workItem from="1685205899522" duration="5629000" />
-      <workItem from="1685304913342" duration="8114000" />
+      <workItem from="1685304913342" duration="8167000" />
+      <workItem from="1685384829639" duration="2127000" />
+      <workItem from="1685387924832" duration="5635000" />
+      <workItem from="1685395263281" duration="5042000" />
+      <workItem from="1685453151978" duration="7456000" />
     </task>
     <task id="LOCAL-00001" summary="Built frame">
       <created>1683579882206</created>
@@ -226,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685314361932</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Clean up">
+      <created>1685316148649</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1685316148649</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,10 +293,10 @@
     <MESSAGE value="Optimized panel" />
     <MESSAGE value="Added translate exercise" />
     <MESSAGE value="Added Practice page" />
-    <MESSAGE value="Clean up" />
     <MESSAGE value="Optimised Practice" />
     <MESSAGE value="Optimized Account" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimized Account" />
+    <MESSAGE value="Clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
