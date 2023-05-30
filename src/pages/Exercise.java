@@ -7,26 +7,9 @@ import database.Level;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
-//import javax.swing.*;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
-import javax.swing.SwingConstants;
-
-
-//import java.awt.*;
-import java.awt.Font;
-import java.awt.Color;
-import java.awt.Cursor;
-
-//import java.io.*;
-import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.FileReader;
+import javax.swing.*;
+import java.awt.*;
+import java.io.*;
 
 import java.util.Objects;
 
